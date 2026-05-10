@@ -1,78 +1,35 @@
 # Bone Fracture ML Detection
 
-A PyTorch-based machine learning project for binary bone fracture detection using the **FracAtlas X-ray dataset**. This project compares multiple convolutional neural network architectures, including a custom CNN baseline and ImageNet-pretrained transfer learning models, to classify musculoskeletal X-ray images as **fracture** or **no fracture**.
-
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Motivation](#motivation)
-- [Dataset](#dataset)
-- [Task Definition](#task-definition)
-- [Model Architectures](#model-architectures)
-- [Preprocessing and Augmentation](#preprocessing-and-augmentation)
-- [Repository Structure](#repository-structure)
-- [Installation](#installation)
-- [How to Run](#how-to-run)
-  - [1. Inspect the Dataset](#1-inspect-the-dataset)
-  - [2. Split the Dataset](#2-split-the-dataset)
-  - [3. Train a Model](#3-train-a-model)
-  - [4. Evaluate a Trained Model](#4-evaluate-a-trained-model)
-  - [5. Generate Grad-CAM Visualizations](#5-generate-grad-cam-visualizations)
-- [Results](#results)
-- [Interpretation of Results](#interpretation-of-results)
-- [Grad-CAM Explainability](#grad-cam-explainability)
-- [Reproducibility](#reproducibility)
-- [Limitations](#limitations)
-- [Future Work](#future-work)
-- [Technologies Used](#technologies-used)
-- [References](#references)
-- [Disclaimer](#disclaimer)
-- [Author](#author)
+A PyTorch-based machine learning project for binary bone fracture detection using the **FracAtlas X-ray dataset**. This project compares several CNN-based models, including a custom CNN baseline and ImageNet-pretrained transfer learning models, to classify X-ray images as either **fracture** or **no fracture**.
 
 ## Project Overview
 
-This project develops and evaluates machine learning models for **binary bone fracture classification** from X-ray images. The goal is to determine whether an input musculoskeletal radiograph contains a fracture.
+This project builds a complete machine learning pipeline for bone fracture classification from X-ray images. The goal is to evaluate whether convolutional neural networks can detect fractures from musculoskeletal radiographs.
 
-The project includes a complete PyTorch pipeline:
+The project includes:
 
 - Dataset loading from CSV metadata
 - Train / validation / test splitting
-- Medical-image-aware preprocessing
-- Data augmentation
-- Training with class imbalance handling
-- Evaluation with clinically meaningful metrics
-- Comparison of multiple CNN architectures
-- Grad-CAM visualization for interpretability
+- X-ray image preprocessing
+- Medical-image-safe data augmentation
+- Multiple CNN model architectures
+- Training and evaluation scripts
+- Model comparison using clinical-style metrics
+- Grad-CAM visualization for model interpretability
 
-The main models compared in this project are:
-
-1. Custom CNN
-2. MobileNetV2
-3. ResNet50
-4. DenseNet121
-
-Among the current experiments, **ResNet50** achieved the strongest overall performance based on F1-score, recall, and ROC-AUC.
+This project is designed for educational and research purposes. It is not intended for clinical diagnosis.
 
 ## Motivation
 
-Bone fracture detection is an important medical imaging task. In real clinical settings, missing a fracture can delay treatment and lead to further injury, chronic pain, or long-term complications. Although this project is not intended for clinical use, it explores how deep learning can assist fracture classification from X-ray images.
+Bone fracture detection is an important medical imaging task. In real clinical settings, missing a fracture can delay treatment and potentially harm patients. Because of this, this project does not only report accuracy. It also reports recall, specificity, F1-score, ROC-AUC, and confusion matrix values.
 
-For this task, **recall**, also known as sensitivity, is especially important. A false negative means the model predicts “no fracture” when a fracture is actually present. In medical imaging, false negatives are often more dangerous than false positives because a missed diagnosis can affect patient care.
-
-Therefore, this project reports not only accuracy, but also:
-
-- Precision
-- Recall / sensitivity
-- Specificity
-- F1-score
-- ROC-AUC
-- Confusion matrix values
+For this task, **recall** is especially important because a false negative means the model missed an actual fracture.
 
 ## Dataset
 
-This project uses the **FracAtlas** dataset, a musculoskeletal radiograph dataset for fracture classification, localization, and segmentation.
+This project uses the **FracAtlas X-ray dataset**, which contains musculoskeletal radiographs with fracture-related labels.
 
-The dataset is stored under:
+The expected dataset structure is:
 
 ```text
 data/FracAtlas/
@@ -83,14 +40,14 @@ data/FracAtlas/
 └── test.csv
 ```
 
-The main CSV columns used in this project are:
+The main CSV columns used by this project are:
 
 | Column | Description |
 |---|---|
-| `image_id` | Filename of the X-ray image |
-| `fractured` | Binary label: `1` for fracture, `0` for no fracture |
+| `image_id` | Image filename |
+| `fractured` | Binary label, where `1` means fracture and `0` means no fracture |
 
-Current dataset split:
+Current split used in this project:
 
 | Split | Number of Images |
 |---|---:|
@@ -101,18 +58,18 @@ Current dataset split:
 
 ## Task Definition
 
-This is a **binary image classification** task.
+This is a binary image classification task.
 
-Given an X-ray image, the model predicts:
+Given one X-ray image, the model predicts:
 
 | Label | Meaning |
 |---:|---|
 | `0` | No fracture |
 | `1` | Fracture |
 
-The model outputs a single logit. During training, the project uses `BCEWithLogitsLoss`, which combines a sigmoid layer and binary cross-entropy loss in a numerically stable way.
+The model outputs one logit. During training, the project uses `BCEWithLogitsLoss`, which is appropriate for binary classification.
 
-During inference, the output logit is converted to a probability using the sigmoid function:
+During inference, the output logit is converted into a probability using sigmoid:
 
 ```text
 probability = sigmoid(logit)
@@ -127,76 +84,53 @@ probability < 0.5  → no fracture
 
 ## Model Architectures
 
-This project compares four CNN-based architectures.
+This project compares four CNN-based models.
 
 ### 1. Custom CNN
 
-The custom CNN is a simple baseline model built from scratch. It is intentionally lightweight and serves as a lower-bound comparison against pretrained transfer learning models.
-
-General structure:
-
-```text
-Conv2D → ReLU → MaxPool
-Conv2D → ReLU → MaxPool
-Conv2D → ReLU → MaxPool
-Conv2D → ReLU
-Adaptive Average Pooling
-Dropout
-Linear output layer
-```
+A simple convolutional neural network built from scratch. It is used as a baseline model.
 
 ### 2. MobileNetV2
 
-MobileNetV2 is a lightweight convolutional neural network designed for efficient inference. It is useful when model size and speed matter.
-
-In this project, the ImageNet-pretrained MobileNetV2 classification head is replaced with a binary output layer.
+A lightweight ImageNet-pretrained model. It is useful for efficient inference and smaller model size.
 
 ### 3. ResNet50
 
-ResNet50 is a deep residual network that uses skip connections to make training deeper networks easier. It is a strong general-purpose computer vision backbone and performed best in the current experiments.
-
-The original ImageNet classification layer is replaced with a single-output binary classification head.
+A deeper residual network with skip connections. In the current experiments, ResNet50 achieved the strongest overall performance.
 
 ### 4. DenseNet121
 
-DenseNet121 uses dense connections between layers, allowing feature reuse throughout the network. DenseNet-style architectures are commonly used in medical imaging research because they can learn useful features from limited data.
+A densely connected CNN architecture that is commonly used in medical imaging research because it can reuse features effectively.
 
-The original classifier is replaced with a binary classification output layer.
+For the pretrained models, the original ImageNet classification head is replaced with a single-output binary classification layer.
 
 ## Preprocessing and Augmentation
 
-Medical images require careful preprocessing because unrealistic transformations can damage important anatomical information.
+The data pipeline is designed for X-ray images, where preserving anatomical structure is important.
 
 ### Validation and Test Preprocessing
 
-For validation and test images, the pipeline is deterministic:
+For validation and test images, the pipeline applies:
 
-1. Load image using PIL
+1. Load image with PIL
 2. Convert image to RGB
 3. Pad image to a square shape while preserving aspect ratio
 4. Resize to `224 x 224`
 5. Convert to PyTorch tensor
 6. Normalize using ImageNet mean and standard deviation
 
-The aspect-ratio-preserving step is important because directly resizing rectangular X-ray images to a square can stretch or distort bone structures.
+Padding before resizing is used to avoid stretching or distorting bone structures.
 
 ### Training Augmentation
 
 For training images, the project applies realistic augmentations:
 
-- Small random rotation
+- Small rotation
 - Small affine translation
 - Brightness and contrast jitter
 - Optional horizontal flip
-- ImageNet normalization
 
-The project intentionally avoids:
-
-- Vertical flipping
-- Random resized cropping
-- Heavy geometric distortion
-
-These transformations are avoided because medical X-rays should remain anatomically realistic, and cropping may remove the fracture region.
+The pipeline intentionally avoids vertical flipping and random cropping because these transformations can be unrealistic or harmful for medical X-ray interpretation.
 
 ## Repository Structure
 
@@ -211,14 +145,10 @@ Bone_Fracture_ML_Detection/
 │       └── test.csv
 │
 ├── outputs/
-│   ├── custom_cnn_test/
-│   ├── mobilenet_v2_5ep/
-│   ├── resnet50_repro_5ep_eval.log
-│   ├── resnet50_repro_5ep_train.log
-│   └── results_summary.csv
+│   ├── results_summary.csv
+│   └── other training / evaluation outputs
 │
 ├── research_context/
-│
 ├── shared/
 │
 ├── src/
@@ -249,7 +179,7 @@ Create a virtual environment:
 python -m venv venv
 ```
 
-Activate the environment:
+Activate the environment.
 
 For macOS / Linux:
 
@@ -269,17 +199,13 @@ Install dependencies:
 pip install torch torchvision pandas numpy scikit-learn matplotlib pillow
 ```
 
-If using a CUDA GPU, install the correct PyTorch version from the official PyTorch installation page:
-
-```text
-https://pytorch.org/get-started/locally/
-```
+If you are using a CUDA GPU, install the correct PyTorch version from the official PyTorch website.
 
 ## How to Run
 
 ### 1. Inspect the Dataset
 
-Before training, inspect the dataset structure and label distribution:
+Before training, check that the dataset and image paths are correct:
 
 ```bash
 python src/inspect_dataset.py \
@@ -287,12 +213,12 @@ python src/inspect_dataset.py \
   --image_dir data/FracAtlas/images
 ```
 
-This helps confirm that:
+This script helps verify:
 
-- The CSV file can be loaded
-- Image paths are correct
-- Labels are available
-- The class distribution is reasonable
+- CSV columns
+- Label distribution
+- Image filename column
+- Whether the image files exist on disk
 
 ### 2. Split the Dataset
 
@@ -344,23 +270,23 @@ resnet50
 densenet121
 ```
 
-Useful training options:
+Useful arguments:
 
 | Argument | Description |
 |---|---|
 | `--model` | Model architecture |
-| `--train_csv` | Path to training CSV |
-| `--val_csv` | Path to validation CSV |
-| `--test_csv` | Path to test CSV |
-| `--image_dir` | Path to image folder |
+| `--train_csv` | Training CSV path |
+| `--val_csv` | Validation CSV path |
+| `--test_csv` | Test CSV path |
+| `--image_dir` | Image folder path |
 | `--epochs` | Number of training epochs |
 | `--batch_size` | Batch size |
 | `--lr` | Learning rate |
-| `--output_dir` | Folder for checkpoints, metrics, and figures |
-| `--use_pos_weight` | Uses positive class weighting for class imbalance |
-| `--seed` | Random seed for reproducibility |
+| `--output_dir` | Output folder |
+| `--use_pos_weight` | Use class weighting for imbalance |
+| `--seed` | Random seed |
 
-The training script saves:
+The training script saves outputs such as:
 
 ```text
 outputs/<run_name>/
@@ -369,18 +295,11 @@ outputs/<run_name>/
 ├── run_metadata.json
 ├── requirements.lock
 └── figures/
-    ├── loss_curve.png
-    ├── accuracy_curve.png
-    ├── precision_curve.png
-    ├── recall_curve.png
-    ├── f1_curve.png
-    ├── specificity_curve.png
-    └── roc_auc_curve.png
 ```
 
-### 4. Evaluate a Trained Model
+### 4. Evaluate a Model
 
-Example: evaluate a trained ResNet50 checkpoint.
+After training, evaluate a checkpoint on the test set:
 
 ```bash
 python src/evaluate.py \
@@ -417,7 +336,7 @@ outputs/<run_name>/evaluation/
 
 ### 5. Generate Grad-CAM Visualizations
 
-Grad-CAM helps visualize which regions of the X-ray influenced the model prediction.
+Grad-CAM is used to visualize which regions of the X-ray influenced the model prediction.
 
 Example:
 
@@ -432,11 +351,11 @@ python src/gradcam.py \
   --num_examples 5
 ```
 
-Grad-CAM outputs are useful for checking whether the model focuses on meaningful bone regions instead of unrelated image artifacts.
+Grad-CAM helps check whether the model is focusing on meaningful bone regions instead of unrelated artifacts.
 
 ## Results
 
-The following table summarizes the current test-set performance.
+The following table summarizes the current test-set results.
 
 | Model | Epochs | Accuracy | Precision | Recall | Specificity | F1-score | ROC-AUC | TP | FP | TN | FN |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -445,31 +364,33 @@ The following table summarizes the current test-set performance.
 | ResNet50 | 5 | 0.8581 | 0.5734 | 0.7593 | 0.8792 | 0.6534 | 0.8915 | 82 | 61 | 444 | 26 |
 | DenseNet121 | 5 | 0.8450 | 0.5520 | 0.6389 | 0.8891 | 0.5923 | 0.8558 | 69 | 56 | 449 | 39 |
 
-## Interpretation of Results
+## Result Interpretation
 
-### Best Overall Model
+Among the tested models, **ResNet50** achieved the best overall performance.
 
-Based on the current experiments, **ResNet50** achieved the strongest overall result:
+It had:
 
 - Highest accuracy: `0.8581`
 - Highest recall: `0.7593`
 - Highest F1-score: `0.6534`
 - Highest ROC-AUC: `0.8915`
-- Lowest number of false negatives: `26`
+- Lowest false negatives: `26`
 
-This suggests that ResNet50 was the best model in the current comparison for identifying fracture cases while maintaining reasonable performance on non-fracture images.
+This is important because false negatives are especially concerning in fracture detection. A false negative means the model missed an actual fracture.
 
-### Why Recall Matters
+The pretrained transfer learning models performed better than the custom CNN baseline. This makes sense because the dataset is relatively small compared with large-scale natural image datasets, and pretrained CNN backbones already contain useful visual features such as edges, textures, and shapes.
 
-In fracture detection, recall is especially important because it measures how many actual fractures the model successfully detects.
+## Why Recall Matters
+
+In this project, recall is one of the most important metrics.
 
 ```text
 Recall = TP / (TP + FN)
 ```
 
-A false negative means the model missed a fracture. In a medical setting, this could be more serious than a false positive because a missed fracture may delay treatment.
+A higher recall means the model catches more actual fracture cases. In medical screening tasks, this is important because missing a fracture can be more harmful than incorrectly flagging a normal image.
 
-In this project, ResNet50 had the fewest false negatives among the tested models:
+False negatives in the current experiments:
 
 | Model | False Negatives |
 |---|---:|
@@ -478,99 +399,78 @@ In this project, ResNet50 had the fewest false negatives among the tested models
 | ResNet50 | 26 |
 | DenseNet121 | 39 |
 
-### Transfer Learning vs. Custom CNN
-
-The pretrained transfer learning models performed better than the custom CNN baseline. This is expected because medical datasets are often relatively small, and pretrained CNNs already contain useful low-level visual features such as edges, textures, and shapes.
-
-The custom CNN still provides a useful baseline because it shows how much performance improves when using stronger pretrained backbones.
+ResNet50 had the lowest number of false negatives among the current models.
 
 ## Grad-CAM Explainability
 
-This project includes Grad-CAM support to improve model interpretability.
+This project includes Grad-CAM support for interpretability.
 
-Grad-CAM produces a heatmap that highlights image regions that contributed most strongly to the model's prediction. For fracture detection, this is useful because it helps answer questions such as:
+Grad-CAM produces heatmaps that show which parts of the image contributed most to the model's prediction. This is useful for medical imaging because it helps answer questions such as:
 
-- Is the model focusing on the bone region?
-- Is the model looking near the fracture line?
+- Is the model looking at the bone region?
+- Is the model focusing near the possible fracture?
 - Is the model relying on irrelevant artifacts?
 - Why did the model miss a fracture?
-- Why did the model incorrectly flag a normal image?
+- Why did the model produce a false positive?
 
-Grad-CAM is not a replacement for clinical validation, but it is a useful debugging and interpretation tool for medical imaging models.
+Grad-CAM does not prove that the model is clinically reliable, but it is useful for debugging and interpretation.
 
 ## Reproducibility
 
 The training script includes reproducibility support, including:
 
 - Random seed setting
-- PyTorch deterministic settings where available
 - Saved training arguments
-- Saved Git commit information when available
 - Saved dataset CSV hashes
+- Saved Git commit information when available
+- Saved environment information
 - Saved `requirements.lock`
-- Saved run metadata in `run_metadata.json`
+- Saved `run_metadata.json`
 
-Example output files:
-
-```text
-run_metadata.json
-requirements.lock
-metrics.csv
-best_model.pth
-```
-
-This makes it easier to track exactly how a model was trained and evaluated.
+These files help track how each experiment was produced.
 
 ## Limitations
 
-This project is for educational and research purposes only. It is not a clinical diagnostic system.
+This project has several important limitations:
 
-Current limitations include:
+1. **Not clinically validated**
 
-1. **No clinical validation**
+   The model is not approved for medical diagnosis and should not be used for real patient care.
 
-   The models were not validated in a real hospital environment and should not be used for patient diagnosis.
+2. **Binary classification only**
 
-2. **Limited dataset size**
+   The model only predicts fracture or no fracture. It does not classify fracture type, anatomical region, severity, or treatment urgency.
 
-   Although FracAtlas is useful for research, real clinical systems require much larger and more diverse datasets.
+3. **No supervised localization**
 
-3. **Binary classification only**
+   Grad-CAM provides visual explanations, but the model is still trained as an image-level classifier.
 
-   The current task only predicts fracture or no fracture. It does not classify fracture type, severity, anatomical region, or treatment urgency.
+4. **Dataset limitations**
 
-4. **No direct fracture localization**
+   The model may learn patterns specific to the FracAtlas dataset and may not generalize to other hospitals, imaging devices, or patient populations.
 
-   The model performs image-level classification. Grad-CAM provides visual explanation, but it is not the same as a supervised localization model.
+5. **Threshold not optimized**
 
-5. **Potential dataset bias**
+   The current prediction threshold is `0.5`. In a medical screening setting, threshold tuning may be needed to reduce false negatives.
 
-   The model may learn patterns specific to the dataset, imaging source, annotation style, or preprocessing pipeline.
+6. **False negatives still exist**
 
-6. **Threshold not optimized**
-
-   The default classification threshold is `0.5`. For medical screening, a lower threshold may improve recall and reduce missed fractures.
-
-7. **False negatives still exist**
-
-   Even the best current model still misses some fracture cases, which would be unacceptable in real clinical deployment without further validation.
+   Even the best current model still misses some fracture cases.
 
 ## Future Work
 
-Potential improvements include:
+Possible improvements include:
 
 - Train all models for more epochs under the same experimental setup
 - Tune learning rate, batch size, optimizer, and weight decay
-- Optimize classification threshold to reduce false negatives
-- Use stronger data augmentation while preserving medical realism
-- Add EfficientNet, ConvNeXt, or Vision Transformer baselines
-- Use ensemble models to improve robustness
-- Add external validation using a separate X-ray dataset
+- Optimize the classification threshold to reduce false negatives
+- Add more model architectures such as EfficientNet or ConvNeXt
+- Use ensemble models
+- Add external validation using another X-ray dataset
 - Use bounding box or segmentation annotations for localization-aware evaluation
 - Compare Grad-CAM heatmaps with ground-truth fracture annotations
-- Build a simple web demo for image upload and prediction visualization
-- Add automated experiment tracking with tools such as Weights & Biases or TensorBoard
-- Add unit tests for dataset loading, preprocessing, and model output shapes
+- Add a simple web demo for uploading an X-ray and viewing predictions
+- Add automated experiment tracking with TensorBoard or Weights & Biases
 
 ## Technologies Used
 
@@ -585,24 +485,15 @@ Potential improvements include:
 
 ## References
 
-- Abedeen, I., et al. “FracAtlas: A Dataset for Fracture Classification, Localization and Segmentation of Musculoskeletal Radiographs.” *Scientific Data*, 2023.  
-  https://www.nature.com/articles/s41597-023-02432-4
-
-- FracAtlas Dataset on Figshare.  
-  https://figshare.com/articles/dataset/The_dataset/22363012
-
-- PyTorch Documentation.  
-  https://pytorch.org/docs/stable/index.html
-
-- Torchvision Models Documentation.  
-  https://pytorch.org/vision/stable/models.html
-
-- Selvaraju, R. R., et al. “Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization.”  
-  https://arxiv.org/abs/1610.02391
+- Abedeen, I., et al. “FracAtlas: A Dataset for Fracture Classification, Localization and Segmentation of Musculoskeletal Radiographs.” *Scientific Data*, 2023.
+- FracAtlas Dataset on Figshare.
+- PyTorch Documentation.
+- Torchvision Models Documentation.
+- Selvaraju, R. R., et al. “Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization.”
 
 ## Disclaimer
 
-This project is not intended for clinical diagnosis or medical decision-making. The predictions, evaluation metrics, and Grad-CAM visualizations are for educational and research exploration only. Any real-world medical application would require expert review, external validation, regulatory approval, and clinical testing.
+This project is for educational and research purposes only. It is not intended for clinical diagnosis or medical decision-making. Any real-world medical application would require expert review, external validation, regulatory approval, and clinical testing.
 
 ## Author
 
