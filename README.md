@@ -500,3 +500,5 @@ This project is for educational and research purposes only. It is not intended f
 **Kenneth / Zijian Wang**
 
 Computer Science student interested in artificial intelligence, machine learning, medical imaging, and applied deep learning systems.
+
+Note: The full CSV metadata contains 4,083 image records, but the repository may only include a subset of image files due to repository size limits. For a quick runnable demo, use `dataset_available.csv`, `train_available.csv`, `val_available.csv`, and `test_available.csv`, which are generated from the images currently available in `data/FracAtlas/images/`. To reproduce full training, download the complete FracAtlas image set and place all images under `data/FracAtlas/images/`.
