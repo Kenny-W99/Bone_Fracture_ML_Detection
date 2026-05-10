@@ -503,8 +503,9 @@ def train(args):
         "train_roc_auc": [], "val_roc_auc": [],
     }
 
-    best_val_f1 = 0.0
+    best_val_f1 = -1.0
     best_epoch = 0
+    checkpoint_path = output_dir / "best_model.pth"
     start_time = time.time()
 
     for epoch in range(1, args.epochs + 1):

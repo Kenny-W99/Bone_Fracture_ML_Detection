@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+
+*.pth
+*.pt
+*.ckpt
+
+outputs/*/requirements.lock
