@@ -1,0 +1,66 @@
+/Users/kenwang/Documents/Ken的Projects和杂物 (里面有所有需要的项目)/Project/Bone_Frature/src/train.py:396: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp_utc": _dt.datetime.utcnow().isoformat() + "Z",
+/opt/anaconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+  [reproducibility] seed=42, det=warn_only, git=none (no_git)
+  [reproducibility] wrote outputs/resnet50_repro_5ep/run_metadata.json
+  [reproducibility] wrote outputs/resnet50_repro_5ep/requirements.lock
+
+============================================================
+  FRACATLAS TRAINING
+============================================================
+  Device: mps
+
+  Model: resnet50
+  Parameters: 23,510,081 total, 23,510,081 trainable
+
+  Loading data...
+[FracAtlasDataset] Loaded 2858 samples from 'data/FracAtlas/train.csv'
+[FracAtlasDataset] Loaded 612 samples from 'data/FracAtlas/val.csv'
+[FracAtlasDataset] Loaded 613 samples from 'data/FracAtlas/test.csv'
+
+  Epochs: 5
+  Batch size: 32
+  Learning rate: 0.0001
+  Optimizer: AdamW
+  Checkpoint metric: val_f1
+
+============================================================
+  Epoch | Train Loss | Val Loss | Val Acc | Val F1 | Val Rec | Val AUC
+  ----- | ---------- | -------- | ------- | ------ | ------- | -------
+/opt/anaconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+/opt/anaconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+      1 |     0.3987 |   0.3885 |  0.8529 | 0.3284 |  0.2056 |  0.8117
+/opt/anaconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+/opt/anaconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+      2 |     0.2925 |   0.3017 |  0.8791 | 0.5934 |  0.5047 |  0.8819
+/opt/anaconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+/opt/anaconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+      3 |     0.2632 |   0.3081 |  0.8742 | 0.5032 |  0.3645 |  0.8777
+/opt/anaconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+/opt/anaconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+      4 |     0.2385 |   0.3140 |  0.8856 | 0.6500 |  0.6075 |  0.8796
+/opt/anaconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
+  super().__init__(loader)
+      5 |     0.2078 |   0.2807 |  0.8954 | 0.6522 |  0.5607 |  0.8954
+
+============================================================
+  TRAINING COMPLETE
+============================================================
+  Total time: 9.2 minutes
+  Best epoch: 5 (val F1 = 0.6522)
+  Checkpoint: outputs/resnet50_repro_5ep/best_model.pth
+  Metrics CSV: outputs/resnet50_repro_5ep/metrics.csv
+  📊 Loss curve saved: outputs/resnet50_repro_5ep/figures/loss_curve.png
+  📊 Metric curves saved to: outputs/resnet50_repro_5ep/figures
+
+  Done! Next step: python src/evaluate.py --checkpoint outputs/resnet50_repro_5ep/best_model.pth ...
+

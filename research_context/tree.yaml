@@ -1,0 +1,211 @@
+# Research Tree - Auto-generated
+# Do not edit manually - synced from Supabase
+
+updated_at: "2026-05-09T22:36:57.286Z"
+node_count: 14
+nodes:
+  - id: n_29639422_jl0f
+        type: main_question
+        label: How effectively can CNN models identify bone fractures in X-ray images?
+        description: Build and evaluate a CNN-based system that can identify whether an X-ray image contains a bone fracture. The project should focus on medical image classification, with optional extension to localization or segmentation if the dataset supports it. The system is a research prototype, not a clinical tool, prioritizing reproducibility and honest evaluation.
+        status: in_progress
+        parent_id: null
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.265Z"
+  - id: n_29639422_kj3p
+        type: data
+        label: Dataset Recommendation and Comparison
+        description: "Compare possible public datasets for this project:\n- FracAtlas\n- MURA (Musculoskeletal Radiographs)\n- Other public musculoskeletal X-ray fracture datasets\n\nConsider dataset size, annotation quality, labels, class balance, ease of access, and support for classification/localization/segmentation. Explain which is best for version 1.0."
+        status: not_started
+        parent_id: n_29639422_jl0f
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.244Z"
+  - id: n_29639422_oizn
+        type: limitation
+        label: Expected Challenges and Solutions
+        description: "Identify and mitigate:\n- Small dataset size / Overfitting\n- Class imbalance (e.g., Weighted BCE, Focal Loss)\n- Noisy labels / Dataset bias\n- Lack of external validation\n- General abnormality vs fracture-specific detection"
+        status: not_started
+        parent_id: n_29639422_jl0f
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.266Z"
+          immediateActions:
+            - id: action_91238472
+                        label: "Deepen: Imbalance solutions"
+                        prompt: I want to make sure the model prioritizes recall. Can you explain how to implement Focal Loss or Weighted BCE in PyTorch for this specific dataset?
+  - id: n_29639422_j0hf
+        type: artifact
+        label: Final Deliverables and Project Outputs
+        description: "Final deliverables for the project:\n- Literature review, Methods, Results, Discussion sections\n- Confusion matrix, training/validation curves\n- Grad-CAM examples\n- GitHub repository and presentation outline"
+        status: not_started
+        parent_id: n_29639422_jl0f
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.240Z"
+  - id: n_29639422_mbvr
+        type: method
+        label: Rigorous Evaluation and Medical Metrics Plan
+        description: "Comprehensive evaluation plan:\n- Metrics: Accuracy, Precision, Recall (Sensitivity), F1, ROC-AUC, Specificity\n- Focus: Why Recall/Sensitivity is critical in medical imaging\n- Interpretation: False Negatives vs. False Positives"
+        status: not_started
+        parent_id: n_29639422_jl0f
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.255Z"
+  - id: n_29639422_fhbj
+        type: analysis
+        label: Explainability Component (Grad-CAM)
+        description: Integrate explainability using Grad-CAM or similar visualization methods to identify regions of focus for fracture vs. no-fracture predictions. Validate against bounding boxes if available.
+        status: not_started
+        parent_id: n_29639422_jl0f
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.257Z"
+          immediateActions:
+            - id: action_33842109
+                        label: "Deepen: Grad-CAM implementation"
+                        prompt: How exactly do I implement Grad-CAM for models like DenseNet121 in PyTorch, and how do I overlay it on the X-rays to check against the bounding boxes?
+  - id: n_29639422_lb4u
+        type: task
+        label: Implementation Roadmap (Python/PyTorch/TensorFlow)
+        description: "Step-by-step roadmap:\n- Folder and script/notebook structure\n- Data preprocessing steps\n- Training loop and evaluation code\n- Visualization and final report figures"
+        status: not_started
+        parent_id: null
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.277Z"
+  - id: n_29639422_s3pr
+        type: method
+        label: Model Selection and Architecture Recommendation
+        description: "Evaluation and recommendation of models:\n- Custom CNN baseline\n- MobileNetV2 (Lightweight)\n- ResNet50\n- DenseNet121 or DenseNet169\n- EfficientNetB0"
+        status: not_started
+        parent_id: n_29639422_jl0f
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.284Z"
+  - id: n_29639422_5yfc
+        type: metadata
+        label: Project Principles and Constraints
+        description: "Project-level principles and constraints:\n- Undergraduate student audience (CS student, AI/Medical Imaging/Software Engineering interest)\n- Realistic but rigorous research portfolio project\n- Research prototype, not a clinical diagnostic tool\n- No unsupported medical claims\n- Prioritize reproducibility and honest evaluation over exaggerated accuracy\n- Explicitly state dataset and paper limitations"
+        status: completed
+        parent_id: null
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.275Z"
+  - id: n_29639422_0njv
+        type: literature
+        label: "Literature Review: CNNs for Fracture Detection"
+        description: "Search and summarize recent research on bone fracture detection from X-ray images using CNNs, transfer learning, and medical image classification (e.g., FracAtlas, MURA).\nFor each paper, cover:\n- research problem\n- dataset used\n- model architecture\n- evaluation metrics\n- main results\n- limitations\n- connection to project"
+        status: not_started
+        parent_id: n_29639422_jl0f
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.274Z"
+  - id: n_29639422_u4wn
+        type: method
+        label: Experimental Pipeline and Methodology Design
+        description: "Design a full experimental pipeline. Status: Pipeline strategy confirmed and refined.\nKey components:\n- PyTorch Dataset class (FracAtlasDataset) handling RGB conversion and float32 labels.\n- Aspect-ratio preserving resize (Square Padding) to prevent bone distortion.\n- Train Transforms: SquarePad, Resize, Horizontal Flip, <15deg Rotation, <5% Translation, Brightness/Contrast jitter.\n- Val/Test Transforms: SquarePad, Resize, ToTensor, ImageNet Normalization.\n- Prohibited: Vertical flips, Random Resized Crops."
+        status: in_progress
+        parent_id: n_29639422_jl0f
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.278Z"
+          immediateActions:
+            - id: action_16843210
+                        label: "Deepen: PyTorch Dataset design"
+                        prompt: "Let's focus on the data pipeline first. How should I write the PyTorch Dataset class for FracAtlas, and what specific `torchvision.transforms` should I use for medical image augmentation?"
+  - id: n_29639422_zgu0
+        type: draft
+        label: Research Paper/Report Outline
+        description: "Outline for a research-style report:\n- Abstract & Introduction\n- Related Work\n- Dataset & Methodology\n- Experiments & Results\n- Discussion, Limitations, & Conclusion"
+        status: not_started
+        parent_id: n_29639422_jl0f
+        attributes:
+          deepResearchDoc:
+            query: Comprehensive review of bone fracture detection from X-ray images using CNNs and transfer learning. Focus on public datasets like MURA, GRAZPEDWRI-DX, and FracAtlas. Examine model architectures (ResNet, DenseNet, EfficientNet, MobileNet), class imbalance handling, evaluation metrics (especially sensitivity/recall), and explainability methods like Grad-CAM.
+            assetId: afc60177-e4cd-4617-aa21-58dc1536ad51
+            filePath: a7e848e4-4df8-4986-9785-c55a0d0fabc0/research-context/literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            filename: literature-review-comprehensive-review-of-bone-fracture-detection-from-x-ray-i-20260509-222207.md
+            generatedAt: "2026-05-09T22:22:46.278Z"
+  - id: n_29639433_fvsv
+        type: task
+        label: Develop Training Loop with Medical Metrics
+        description: Implement a training loop that utilizes BCEWithLogitsLoss and supports tracking of medical-specific metrics (Sensitivity/Recall).
+        status: not_started
+        parent_id: n_29639422_lb4u
+        attributes: {}
+  - id: n_29639433_cn9v
+        type: task
+        label: Implement PyTorch Dataset and Transforms
+        description: "Create the `src/dataset.py` script containing the `FracAtlasDataset` class. \nRequirements:\n- Custom `SquarePad` transform to preserve aspect ratio before resizing.\n- Separate Train and Val transformation pipelines.\n- Train: SquarePad -> Resize(224) -> HorizontalFlip -> Rotation(<15) -> Affine -> ColorJitter (brightness/contrast) -> ToTensor -> ImageNet Normalization.\n- Val: SquarePad -> Resize(224) -> ToTensor -> ImageNet Normalization.\n- Support for BCEWithLogitsLoss (float32 labels).\n- Debugging utilities to verify class distribution and tensor shapes."
+        status: in_progress
+        parent_id: n_29639422_lb4u
+        attributes: {}
+edges:
+  - source: n_29639422_jl0f
+        target: n_29639422_0njv
+  - source: n_29639422_jl0f
+        target: n_29639422_fhbj
+  - source: n_29639422_jl0f
+        target: n_29639422_j0hf
+  - source: n_29639422_jl0f
+        target: n_29639422_s3pr
+  - source: n_29639422_jl0f
+        target: n_29639422_oizn
+  - source: n_29639422_jl0f
+        target: n_29639422_u4wn
+  - source: n_29639422_jl0f
+        target: n_29639422_mbvr
+  - source: n_29639422_jl0f
+        target: n_29639422_zgu0
+  - source: n_29639422_jl0f
+        target: n_29639422_kj3p
+  - source: n_29639422_lb4u
+        target: n_29639433_fvsv
+  - source: n_29639422_lb4u
+        target: n_29639433_cn9v

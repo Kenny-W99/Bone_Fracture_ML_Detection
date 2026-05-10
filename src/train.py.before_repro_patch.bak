@@ -1,0 +1,548 @@
+"""
+FracAtlas — Training Script
+=============================
+
+Trains a CNN for binary fracture classification on the FracAtlas dataset.
+
+Features:
+  • Supports 4 model architectures (custom_cnn, mobilenet_v2, resnet50, densenet121)
+  • BCEWithLogitsLoss with optional pos_weight for class imbalance
+  • Tracks: loss, accuracy, precision, recall, specificity, F1, ROC-AUC
+  • Saves best checkpoint based on validation F1 (or recall)
+  • Saves loss/metric curves to outputs/figures/
+  • Saves per-epoch metrics to outputs/metrics.csv
+
+Usage:
+------
+    python src/train.py \\
+        --model resnet50 \\
+        --train_csv data/FracAtlas/train.csv \\
+        --val_csv data/FracAtlas/val.csv \\
+        --test_csv data/FracAtlas/test.csv \\
+        --image_dir data/FracAtlas/images \\
+        --epochs 30 \\
+        --batch_size 32 \\
+        --lr 1e-4 \\
+        --output_dir outputs \\
+        --use_pos_weight
+
+Author : FracAtlas Project
+"""
+
+import os
+import sys
+import argparse
+import time
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import torch
+import torch.nn as nn
+from torch.optim import AdamW
+from torch.optim.lr_scheduler import ReduceLROnPlateau
+
+# Metrics
+from sklearn.metrics import (
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score,
+    roc_auc_score,
+    confusion_matrix,
+)
+
+# Plotting
+import matplotlib
+matplotlib.use("Agg")  # Non-interactive backend (works on servers without display)
+import matplotlib.pyplot as plt
+
+# Our project modules
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.dataset import create_dataloaders, FracAtlasDataset, get_val_transforms
+from src.models import get_model, count_parameters
+
+
+# =============================================================================
+# METRICS COMPUTATION
+# =============================================================================
+
+def compute_metrics(y_true: np.ndarray, y_pred: np.ndarray, y_prob: np.ndarray) -> dict:
+    """
+    Compute all classification metrics for one epoch.
+
+    Parameters
+    ----------
+    y_true : np.ndarray
+        Ground truth labels (0 or 1).
+    y_pred : np.ndarray
+        Predicted labels after thresholding at 0.5.
+    y_prob : np.ndarray
+        Predicted probabilities (after sigmoid).
+
+    Returns
+    -------
+    dict
+        Dictionary with all metrics.
+
+    Notes
+    -----
+    Specificity = TN / (TN + FP) — how well the model identifies NON-fractures.
+    Recall/Sensitivity = TP / (TP + FN) — how well it catches actual fractures.
+
+    In medical imaging, RECALL is critical because a missed fracture (false
+    negative) can lead to delayed treatment and patient harm.
+    """
+    # Confusion matrix: [[TN, FP], [FN, TP]]
+    tn, fp, fn, tp = confusion_matrix(y_true, y_pred, labels=[0, 1]).ravel()
+
+    # Specificity (true negative rate)
+    specificity = tn / (tn + fp) if (tn + fp) > 0 else 0.0
+
+    # ROC-AUC (needs probabilities, not hard predictions)
+    try:
+        auc = roc_auc_score(y_true, y_prob)
+    except ValueError:
+        # Can happen if only one class is present in a small batch
+        auc = 0.0
+
+    return {
+        "accuracy": accuracy_score(y_true, y_pred),
+        "precision": precision_score(y_true, y_pred, zero_division=0),
+        "recall": recall_score(y_true, y_pred, zero_division=0),
+        "specificity": specificity,
+        "f1": f1_score(y_true, y_pred, zero_division=0),
+        "roc_auc": auc,
+        "tp": int(tp),
+        "fp": int(fp),
+        "tn": int(tn),
+        "fn": int(fn),
+    }
+
+
+# =============================================================================
+# TRAINING ONE EPOCH
+# =============================================================================
+
+def train_one_epoch(model, dataloader, criterion, optimizer, device):
+    """
+    Train the model for one epoch.
+
+    Returns
+    -------
+    tuple
+        (average_loss, y_true, y_pred, y_prob)
+    """
+    model.train()  # Set model to training mode (enables dropout, batch norm updates)
+
+    running_loss = 0.0
+    all_labels = []
+    all_preds = []
+    all_probs = []
+
+    for batch_idx, (images, labels) in enumerate(dataloader):
+        # Move data to GPU/CPU
+        images = images.to(device)
+        labels = labels.to(device)
+
+        # Forward pass
+        outputs = model(images).squeeze(1)  # (batch,1) → (batch,)
+        loss = criterion(outputs, labels)
+
+        # Backward pass
+        optimizer.zero_grad()   # Clear old gradients
+        loss.backward()         # Compute new gradients
+        optimizer.step()        # Update weights
+
+        # Track metrics
+        running_loss += loss.item() * images.size(0)
+
+        # Convert logits → probabilities → predictions
+        probs = torch.sigmoid(outputs).detach().cpu().numpy()
+        preds = (probs >= 0.5).astype(int)
+
+        all_labels.extend(labels.cpu().numpy())
+        all_preds.extend(preds)
+        all_probs.extend(probs)
+
+    avg_loss = running_loss / len(dataloader.dataset)
+    return avg_loss, np.array(all_labels), np.array(all_preds), np.array(all_probs)
+
+
+# =============================================================================
+# VALIDATION ONE EPOCH
+# =============================================================================
+
+@torch.no_grad()  # Disable gradient computation for efficiency
+def validate_one_epoch(model, dataloader, criterion, device):
+    """
+    Evaluate the model on validation (or test) data.
+
+    Returns
+    -------
+    tuple
+        (average_loss, y_true, y_pred, y_prob)
+    """
+    model.eval()  # Set model to evaluation mode (disables dropout)
+
+    running_loss = 0.0
+    all_labels = []
+    all_preds = []
+    all_probs = []
+
+    for images, labels in dataloader:
+        images = images.to(device)
+        labels = labels.to(device)
+
+        outputs = model(images).squeeze(1)
+        loss = criterion(outputs, labels)
+
+        running_loss += loss.item() * images.size(0)
+
+        probs = torch.sigmoid(outputs).cpu().numpy()
+        preds = (probs >= 0.5).astype(int)
+
+        all_labels.extend(labels.cpu().numpy())
+        all_preds.extend(preds)
+        all_probs.extend(probs)
+
+    avg_loss = running_loss / len(dataloader.dataset)
+    return avg_loss, np.array(all_labels), np.array(all_preds), np.array(all_probs)
+
+
+# =============================================================================
+# PLOTTING FUNCTIONS
+# =============================================================================
+
+def plot_loss_curves(train_losses, val_losses, save_path):
+    """Plot training and validation loss over epochs."""
+    plt.figure(figsize=(8, 5))
+    epochs = range(1, len(train_losses) + 1)
+    plt.plot(epochs, train_losses, "b-o", label="Train Loss", markersize=3)
+    plt.plot(epochs, val_losses, "r-o", label="Val Loss", markersize=3)
+    plt.xlabel("Epoch")
+    plt.ylabel("BCE Loss")
+    plt.title("Training & Validation Loss")
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    plt.tight_layout()
+    plt.savefig(save_path, dpi=150)
+    plt.close()
+    print(f"  📊 Loss curve saved: {save_path}")
+
+
+def plot_metric_curves(history: dict, metric_name: str, save_path: str):
+    """Plot a specific metric over epochs for train and val."""
+    plt.figure(figsize=(8, 5))
+    epochs = range(1, len(history[f"train_{metric_name}"]) + 1)
+    plt.plot(epochs, history[f"train_{metric_name}"], "b-o", label=f"Train {metric_name}", markersize=3)
+    plt.plot(epochs, history[f"val_{metric_name}"], "r-o", label=f"Val {metric_name}", markersize=3)
+    plt.xlabel("Epoch")
+    plt.ylabel(metric_name.capitalize())
+    plt.title(f"Training & Validation {metric_name.capitalize()}")
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    plt.ylim(0, 1.05)
+    plt.tight_layout()
+    plt.savefig(save_path, dpi=150)
+    plt.close()
+
+
+def plot_all_metrics(history: dict, figures_dir: str):
+    """Generate all metric plots."""
+    for metric in ["accuracy", "precision", "recall", "f1", "roc_auc", "specificity"]:
+        if f"train_{metric}" in history:
+            save_path = os.path.join(figures_dir, f"{metric}_curve.png")
+            plot_metric_curves(history, metric, save_path)
+    print(f"  📊 Metric curves saved to: {figures_dir}")
+
+
+# =============================================================================
+# COMPUTE pos_weight FOR CLASS IMBALANCE
+# =============================================================================
+
+def compute_pos_weight(train_csv: str, label_column: str = None) -> float:
+    """
+    Compute pos_weight for BCEWithLogitsLoss to handle class imbalance.
+
+    pos_weight = num_negatives / num_positives
+
+    If there are 700 non-fracture and 300 fracture images:
+        pos_weight = 700/300 = 2.33
+
+    This tells the loss function to penalize missed fractures 2.33× more
+    than missed non-fractures, which improves recall.
+    """
+    from src.dataset import LABEL_COLUMN as DEFAULT_LABEL_COL
+    if label_column is None:
+        label_column = DEFAULT_LABEL_COL
+
+    df = pd.read_csv(train_csv)
+    labels = df[label_column].values
+    n_pos = (labels == 1).sum()
+    n_neg = (labels == 0).sum()
+
+    if n_pos == 0:
+        print("  ⚠️  WARNING: No positive samples found! pos_weight set to 1.0")
+        return 1.0
+
+    weight = n_neg / n_pos
+    print(f"  ⚖️  Class balance: {n_neg} negative, {n_pos} positive → pos_weight = {weight:.3f}")
+    return weight
+
+
+# =============================================================================
+# MAIN TRAINING FUNCTION
+# =============================================================================
+
+def train(args):
+    """
+    Main training loop.
+
+    This function:
+      1. Sets up device, model, optimizer, loss function
+      2. Creates data loaders
+      3. Trains for N epochs, tracking all metrics
+      4. Saves best checkpoint and metric history
+      5. Plots training curves
+    """
+    # -------------------------------------------------------------------------
+    # Setup output directories
+    # -------------------------------------------------------------------------
+    output_dir = Path(args.output_dir)
+    figures_dir = output_dir / "figures"
+    figures_dir.mkdir(parents=True, exist_ok=True)
+
+    # -------------------------------------------------------------------------
+    # Device selection (GPU if available)
+    # -------------------------------------------------------------------------
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+    elif torch.backends.mps.is_available():
+        device = torch.device("mps")
+    else:
+        device = torch.device("cpu")
+    print(f"\n{'='*60}")
+    print(f"  FRACATLAS TRAINING")
+    print(f"{'='*60}")
+    print(f"  Device: {device}")
+    if device.type == "cuda":
+        print(f"  GPU: {torch.cuda.get_device_name(0)}")
+
+    # -------------------------------------------------------------------------
+    # Load model
+    # -------------------------------------------------------------------------
+    print(f"\n  Model: {args.model}")
+    model = get_model(args.model, pretrained=True)
+    model = model.to(device)
+    params = count_parameters(model)
+    print(f"  Parameters: {params['total']:,} total, {params['trainable']:,} trainable")
+
+    # -------------------------------------------------------------------------
+    # Create data loaders
+    # -------------------------------------------------------------------------
+    print(f"\n  Loading data...")
+    train_loader, val_loader, test_loader = create_dataloaders(
+        train_csv=args.train_csv,
+        val_csv=args.val_csv,
+        test_csv=args.test_csv,
+        img_dir=args.image_dir,
+        batch_size=args.batch_size,
+        num_workers=args.num_workers,
+    )
+
+    # -------------------------------------------------------------------------
+    # Loss function (with optional class imbalance handling)
+    # -------------------------------------------------------------------------
+    if args.use_pos_weight:
+        pw = compute_pos_weight(args.train_csv)
+        pos_weight = torch.tensor([pw], dtype=torch.float32, device=device)
+        criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
+    else:
+        criterion = nn.BCEWithLogitsLoss()
+
+    # -------------------------------------------------------------------------
+    # Optimizer and learning rate scheduler
+    # -------------------------------------------------------------------------
+    optimizer = AdamW(model.parameters(), lr=args.lr, weight_decay=1e-4)
+
+    # ReduceLROnPlateau: reduce LR by 0.5 if val_loss doesn't improve for 5 epochs
+    scheduler = ReduceLROnPlateau(
+        optimizer, mode="min", factor=0.5, patience=5
+    )
+
+    # -------------------------------------------------------------------------
+    # Training loop
+    # -------------------------------------------------------------------------
+    print(f"\n  Epochs: {args.epochs}")
+    print(f"  Batch size: {args.batch_size}")
+    print(f"  Learning rate: {args.lr}")
+    print(f"  Optimizer: AdamW")
+    print(f"  Checkpoint metric: val_f1")
+    print(f"\n{'='*60}")
+    print(f"  {'Epoch':>5} | {'Train Loss':>10} | {'Val Loss':>8} | "
+          f"{'Val Acc':>7} | {'Val F1':>6} | {'Val Rec':>7} | {'Val AUC':>7}")
+    print(f"  {'-'*5} | {'-'*10} | {'-'*8} | {'-'*7} | {'-'*6} | {'-'*7} | {'-'*7}")
+
+    # Metric history for plotting
+    history = {
+        "epoch": [],
+        "train_loss": [], "val_loss": [],
+        "train_accuracy": [], "val_accuracy": [],
+        "train_precision": [], "val_precision": [],
+        "train_recall": [], "val_recall": [],
+        "train_specificity": [], "val_specificity": [],
+        "train_f1": [], "val_f1": [],
+        "train_roc_auc": [], "val_roc_auc": [],
+    }
+
+    best_val_f1 = 0.0
+    best_epoch = 0
+    start_time = time.time()
+
+    for epoch in range(1, args.epochs + 1):
+        # --- Train ---
+        train_loss, tr_true, tr_pred, tr_prob = train_one_epoch(
+            model, train_loader, criterion, optimizer, device
+        )
+        train_metrics = compute_metrics(tr_true, tr_pred, tr_prob)
+
+        # --- Validate ---
+        val_loss, val_true, val_pred, val_prob = validate_one_epoch(
+            model, val_loader, criterion, device
+        )
+        val_metrics = compute_metrics(val_true, val_pred, val_prob)
+
+        # --- Learning rate scheduler step ---
+        scheduler.step(val_loss)
+
+        # --- Record history ---
+        history["epoch"].append(epoch)
+        history["train_loss"].append(train_loss)
+        history["val_loss"].append(val_loss)
+        for key in ["accuracy", "precision", "recall", "specificity", "f1", "roc_auc"]:
+            history[f"train_{key}"].append(train_metrics[key])
+            history[f"val_{key}"].append(val_metrics[key])
+
+        # --- Print progress ---
+        print(f"  {epoch:5d} | {train_loss:10.4f} | {val_loss:8.4f} | "
+              f"{val_metrics['accuracy']:7.4f} | {val_metrics['f1']:6.4f} | "
+              f"{val_metrics['recall']:7.4f} | {val_metrics['roc_auc']:7.4f}")
+
+        # --- Save best checkpoint (based on val F1-score) ---
+        if val_metrics["f1"] > best_val_f1:
+            best_val_f1 = val_metrics["f1"]
+            best_epoch = epoch
+            checkpoint_path = output_dir / "best_model.pth"
+            torch.save({
+                "epoch": epoch,
+                "model_state_dict": model.state_dict(),
+                "optimizer_state_dict": optimizer.state_dict(),
+                "val_f1": best_val_f1,
+                "val_loss": val_loss,
+                "val_metrics": val_metrics,
+                "model_name": args.model,
+                "args": vars(args),
+            }, checkpoint_path)
+
+    # -------------------------------------------------------------------------
+    # Training complete
+    # -------------------------------------------------------------------------
+    elapsed = time.time() - start_time
+    print(f"\n{'='*60}")
+    print(f"  TRAINING COMPLETE")
+    print(f"{'='*60}")
+    print(f"  Total time: {elapsed/60:.1f} minutes")
+    print(f"  Best epoch: {best_epoch} (val F1 = {best_val_f1:.4f})")
+    print(f"  Checkpoint: {checkpoint_path}")
+
+    # -------------------------------------------------------------------------
+    # Save metrics to CSV
+    # -------------------------------------------------------------------------
+    metrics_df = pd.DataFrame(history)
+    metrics_path = output_dir / "metrics.csv"
+    metrics_df.to_csv(metrics_path, index=False)
+    print(f"  Metrics CSV: {metrics_path}")
+
+    # -------------------------------------------------------------------------
+    # Plot curves
+    # -------------------------------------------------------------------------
+    plot_loss_curves(
+        history["train_loss"],
+        history["val_loss"],
+        str(figures_dir / "loss_curve.png"),
+    )
+    plot_all_metrics(history, str(figures_dir))
+
+    print(f"\n  Done! Next step: python src/evaluate.py --checkpoint {checkpoint_path} ...")
+    print()
+
+
+# =============================================================================
+# COMMAND-LINE INTERFACE
+# =============================================================================
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Train a CNN for FracAtlas bone fracture binary classification.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  # Train ResNet50 with default settings:
+  python src/train.py --model resnet50 \\
+      --train_csv data/train.csv --val_csv data/val.csv --test_csv data/test.csv \\
+      --image_dir data/images --epochs 30 --batch_size 32 --lr 1e-4
+
+  # Train with class imbalance correction:
+  python src/train.py --model densenet121 \\
+      --train_csv data/train.csv --val_csv data/val.csv --test_csv data/test.csv \\
+      --image_dir data/images --epochs 50 --use_pos_weight
+
+  # Quick test with custom CNN:
+  python src/train.py --model custom_cnn \\
+      --train_csv data/train.csv --val_csv data/val.csv --test_csv data/test.csv \\
+      --image_dir data/images --epochs 5 --batch_size 16
+        """,
+    )
+
+    # Model
+    parser.add_argument(
+        "--model", type=str, default="resnet50",
+        choices=["custom_cnn", "mobilenet_v2", "resnet50", "densenet121"],
+        help="Model architecture (default: resnet50)",
+    )
+
+    # Data paths
+    parser.add_argument("--train_csv", type=str, required=True, help="Path to training CSV")
+    parser.add_argument("--val_csv", type=str, required=True, help="Path to validation CSV")
+    parser.add_argument("--test_csv", type=str, required=True, help="Path to test CSV")
+    parser.add_argument("--image_dir", type=str, required=True, help="Path to image directory")
+
+    # Training hyperparameters
+    parser.add_argument("--epochs", type=int, default=30, help="Number of training epochs (default: 30)")
+    parser.add_argument("--batch_size", type=int, default=32, help="Batch size (default: 32)")
+    parser.add_argument("--lr", type=float, default=1e-4, help="Learning rate (default: 1e-4)")
+    parser.add_argument("--num_workers", type=int, default=4, help="DataLoader workers (default: 4)")
+
+    # Class imbalance
+    parser.add_argument(
+        "--use_pos_weight", action="store_true", default=False,
+        help="Use pos_weight in BCEWithLogitsLoss to handle class imbalance",
+    )
+
+    # Output
+    parser.add_argument(
+        "--output_dir", type=str, default="outputs",
+        help="Directory for checkpoints, metrics, and figures (default: outputs)",
+    )
+
+    return parser.parse_args()
+
+
+# =============================================================================
+# ENTRY POINT
+# =============================================================================
+
+if __name__ == "__main__":
+    args = parse_args()
+    train(args)
