@@ -10,5 +10,8 @@ venv/
 
 outputs/*/requirements.lock
 outputs/smoke_test/
+outputs/vlm/
 
 .env
+.env.local
+.env.*.local
