@@ -1,10 +1,12 @@
 # Bone Fracture ML Detection
 
-A PyTorch-based machine learning project for binary bone fracture detection using the **FracAtlas X-ray dataset**. This project compares several CNN-based models, including a custom CNN baseline and ImageNet-pretrained transfer learning models, to classify X-ray images as either **fracture** or **no fracture**.
+A PyTorch-based machine learning project for binary bone fracture detection using the **FracAtlas X-ray dataset**. This project compares a custom CNN baseline, ImageNet-pretrained transfer learning models, Grad-CAM explainability outputs, and a small zero-shot vision-language model (VLM) pilot baseline for X-ray fracture classification.
+
+> **Important:** This project is for educational and research purposes only. It is **not** intended for clinical diagnosis or medical decision-making.
 
 ## Project Overview
 
-This project builds a complete machine learning pipeline for bone fracture classification from X-ray images. The goal is to evaluate whether convolutional neural networks can detect fractures from musculoskeletal radiographs.
+This project builds a complete machine learning pipeline for bone fracture classification from musculoskeletal X-ray images. The main goal is to study how well task-specific CNN models can detect fractures, and how their performance compares with a small pilot baseline using a general-purpose multimodal LLM / VLM.
 
 The project includes:
 
@@ -12,18 +14,18 @@ The project includes:
 - Train / validation / test splitting
 - X-ray image preprocessing
 - Medical-image-safe data augmentation
-- Multiple CNN model architectures
+- Custom CNN and transfer learning models
 - Training and evaluation scripts
-- Model comparison using clinical-style metrics
-- Grad-CAM visualization for model interpretability
-
-This project is designed for educational and research purposes. It is not intended for clinical diagnosis.
+- Clinical-style metrics, including recall / sensitivity and false negatives
+- Grad-CAM visualization for interpretability
+- Optional VLM baseline using image-input APIs such as OpenAI, Gemini, or Anthropic
+- Reproducibility utilities and saved experiment outputs
 
 ## Motivation
 
-Bone fracture detection is an important medical imaging task. In real clinical settings, missing a fracture can delay treatment and potentially harm patients. Because of this, this project does not only report accuracy. It also reports recall, specificity, F1-score, ROC-AUC, and confusion matrix values.
+Bone fracture detection is an important medical imaging task. In a real screening context, missing a fracture can delay treatment and potentially harm patients. Because of this, this project does not only report accuracy. It also reports recall, specificity, F1-score, ROC-AUC, and confusion matrix values.
 
-For this task, **recall** is especially important because a false negative means the model missed an actual fracture.
+For this task, **recall / sensitivity** is especially important because a false negative means the model missed an actual fracture.
 
 ## Dataset
 
@@ -47,7 +49,7 @@ The main CSV columns used by this project are:
 | `image_id` | Image filename |
 | `fractured` | Binary label, where `1` means fracture and `0` means no fracture |
 
-Current split used in this project:
+Current full metadata split used in this project:
 
 | Split | Number of Images |
 |---|---:|
@@ -55,6 +57,23 @@ Current split used in this project:
 | Validation | 612 |
 | Test | 613 |
 | Total | 4,083 |
+
+### Repository Image Subset Note
+
+The full CSV metadata contains 4,083 image records, but the GitHub repository may only include a subset of image files because of repository size limits. For quick runnable demos in GitHub Codespaces, use:
+
+```text
+data/FracAtlas/dataset_available.csv
+data/FracAtlas/train_available.csv
+data/FracAtlas/val_available.csv
+data/FracAtlas/test_available.csv
+```
+
+These files are generated from the images currently available under `data/FracAtlas/images/`. To reproduce the full CNN experiment, download the complete FracAtlas image set and place all images under:
+
+```text
+data/FracAtlas/images/
+```
 
 ## Task Definition
 
@@ -67,7 +86,7 @@ Given one X-ray image, the model predicts:
 | `0` | No fracture |
 | `1` | Fracture |
 
-The model outputs one logit. During training, the project uses `BCEWithLogitsLoss`, which is appropriate for binary classification.
+The CNN models output one logit. During training, the project uses `BCEWithLogitsLoss`, which is appropriate for binary classification.
 
 During inference, the output logit is converted into a probability using sigmoid:
 
@@ -84,7 +103,7 @@ probability < 0.5  → no fracture
 
 ## Model Architectures
 
-This project compares four CNN-based models.
+This project compares four CNN-based models and one optional VLM pilot baseline.
 
 ### 1. Custom CNN
 
@@ -96,13 +115,19 @@ A lightweight ImageNet-pretrained model. It is useful for efficient inference an
 
 ### 3. ResNet50
 
-A deeper residual network with skip connections. In the current experiments, ResNet50 achieved the strongest overall performance.
+A deeper residual network with skip connections. In the current CNN experiments, ResNet50 achieved the strongest overall performance.
 
 ### 4. DenseNet121
 
 A densely connected CNN architecture that is commonly used in medical imaging research because it can reuse features effectively.
 
-For the pretrained models, the original ImageNet classification head is replaced with a single-output binary classification layer.
+For the pretrained CNN models, the original ImageNet classification head is replaced with a single-output binary classification layer.
+
+### 5. Vision-Language Model Baseline
+
+The VLM baseline is a zero-shot comparison using a general-purpose multimodal model. The VLM is **not fine-tuned** on FracAtlas. Instead, each X-ray image is sent with a standardized prompt asking the model to classify the image as fracture-positive or no-fracture and return structured JSON.
+
+This VLM experiment is included only as a research comparison. It should not be interpreted as medical diagnosis.
 
 ## Preprocessing and Augmentation
 
@@ -140,12 +165,18 @@ Bone_Fracture_ML_Detection/
 │   └── FracAtlas/
 │       ├── images/
 │       ├── dataset.csv
+│       ├── dataset_available.csv
 │       ├── train.csv
+│       ├── train_available.csv
 │       ├── val.csv
-│       └── test.csv
+│       ├── val_available.csv
+│       ├── test.csv
+│       ├── test_available.csv
+│       └── test_vlm_balanced_40.csv
 │
 ├── outputs/
 │   ├── results_summary.csv
+│   ├── results_summary_with_vlm.csv
 │   └── other training / evaluation outputs
 │
 ├── research_context/
@@ -155,12 +186,20 @@ Bone_Fracture_ML_Detection/
 │   ├── __init__.py
 │   ├── dataset.py
 │   ├── evaluate.py
+│   ├── evaluate_vlm.py
 │   ├── gradcam.py
 │   ├── inspect_dataset.py
+│   ├── make_vlm_subset.py
 │   ├── models.py
 │   ├── split_dataset.py
-│   └── train.py
+│   ├── train.py
+│   ├── vlm_baseline.py
+│   └── append_vlm_to_summary.py
 │
+├── README_VLM_BASELINE.md
+├── requirements.txt
+├── requirements-vlm.txt
+├── .env.example
 └── README.md
 ```
 
@@ -193,13 +232,54 @@ For Windows:
 venv\Scripts\activate
 ```
 
-Install dependencies:
+Install the core dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+If `requirements.txt` is not available in your environment, install the core packages manually:
 
 ```bash
 pip install torch torchvision pandas numpy scikit-learn matplotlib pillow
 ```
 
-If you are using a CUDA GPU, install the correct PyTorch version from the official PyTorch website.
+For the optional VLM baseline, install the VLM dependencies:
+
+```bash
+pip install -r requirements-vlm.txt
+```
+
+If you are using a CUDA GPU, install the correct PyTorch version from the official PyTorch website. On Apple Silicon, the scripts can use Apple MPS when available.
+
+## API Key Setup for VLM Baseline
+
+The VLM baseline requires an API key only if you run a real provider such as OpenAI, Gemini, or Anthropic. The mock provider does not require an API key.
+
+Create a local `.env` file from the example file:
+
+```bash
+cp .env.example .env
+```
+
+Add your own key to `.env`. For example:
+
+```bash
+OPENAI_API_KEY=your_key_here
+GOOGLE_API_KEY=your_key_here
+GEMINI_API_KEY=your_key_here
+ANTHROPIC_API_KEY=your_key_here
+```
+
+Then load the environment variables in the terminal:
+
+```bash
+set -a
+source .env
+set +a
+```
+
+The `.env` file is ignored by Git and should never be committed.
 
 ## How to Run
 
@@ -243,7 +323,7 @@ val.csv
 test.csv
 ```
 
-### 3. Train a Model
+### 3. Train a CNN Model
 
 Example: train ResNet50.
 
@@ -254,14 +334,15 @@ python src/train.py \
   --val_csv data/FracAtlas/val.csv \
   --test_csv data/FracAtlas/test.csv \
   --image_dir data/FracAtlas/images \
-  --epochs 30 \
-  --batch_size 32 \
+  --epochs 5 \
+  --batch_size 16 \
   --lr 1e-4 \
-  --output_dir outputs/resnet50_run \
-  --use_pos_weight
+  --num_workers 0 \
+  --use_pos_weight \
+  --output_dir outputs/resnet50_5ep
 ```
 
-Supported model names:
+Supported CNN model names:
 
 ```text
 custom_cnn
@@ -282,6 +363,7 @@ Useful arguments:
 | `--epochs` | Number of training epochs |
 | `--batch_size` | Batch size |
 | `--lr` | Learning rate |
+| `--num_workers` | DataLoader workers |
 | `--output_dir` | Output folder |
 | `--use_pos_weight` | Use class weighting for imbalance |
 | `--seed` | Random seed |
@@ -297,17 +379,19 @@ outputs/<run_name>/
 └── figures/
 ```
 
-### 4. Evaluate a Model
+### 4. Evaluate a CNN Model
 
 After training, evaluate a checkpoint on the test set:
 
 ```bash
-python src/evaluate.py \
-  --checkpoint outputs/resnet50_run/best_model.pth \
+PYTORCH_ENABLE_MPS_FALLBACK=1 python src/evaluate.py \
+  --checkpoint outputs/resnet50_5ep/best_model.pth \
   --model resnet50 \
   --test_csv data/FracAtlas/test.csv \
   --image_dir data/FracAtlas/images \
-  --output_dir outputs/resnet50_run/evaluation
+  --batch_size 16 \
+  --num_workers 0 \
+  --output_dir outputs/resnet50_5ep/evaluation
 ```
 
 The evaluation script reports:
@@ -341,21 +425,106 @@ Grad-CAM is used to visualize which regions of the X-ray influenced the model pr
 Example:
 
 ```bash
-python src/gradcam.py \
-  --checkpoint outputs/resnet50_run/best_model.pth \
+PYTORCH_ENABLE_MPS_FALLBACK=1 python src/gradcam.py \
+  --checkpoint outputs/resnet50_5ep/best_model.pth \
   --model resnet50 \
   --test_csv data/FracAtlas/test.csv \
   --image_dir data/FracAtlas/images \
-  --predictions_csv outputs/resnet50_run/evaluation/predictions.csv \
-  --output_dir outputs/resnet50_run/gradcam \
+  --predictions_csv outputs/resnet50_5ep/evaluation/predictions.csv \
+  --output_dir outputs/resnet50_5ep/gradcam \
   --num_examples 5
 ```
 
 Grad-CAM helps check whether the model is focusing on meaningful bone regions instead of unrelated artifacts.
 
+### 6. Run the VLM Baseline
+
+First, create a small VLM evaluation subset from the available test images:
+
+```bash
+python src/make_vlm_subset.py \
+  --input_csv data/FracAtlas/test_available.csv \
+  --output_csv data/FracAtlas/test_vlm_balanced_40.csv \
+  --per_class 20
+```
+
+Because the repository image subset may contain only a small number of fracture-positive test images, the resulting file may be smaller than 40 images.
+
+Run a real OpenAI VLM baseline:
+
+```bash
+python src/vlm_baseline.py \
+  --provider openai \
+  --model gpt-4o-mini \
+  --test_csv data/FracAtlas/test_vlm_balanced_40.csv \
+  --image_dir data/FracAtlas/images \
+  --prompt_mode simple \
+  --sleep_sec 1 \
+  --output_csv outputs/vlm/openai_simple_available24_fixed.csv
+```
+
+Evaluate the VLM predictions:
+
+```bash
+python src/evaluate_vlm.py \
+  --predictions_csv outputs/vlm/openai_simple_available24_fixed.csv \
+  --output_dir outputs/vlm/openai_simple_available24_fixed_eval \
+  --title "OpenAI VLM Simple Available 24"
+```
+
+Other prompt modes can be tested with:
+
+```text
+simple
+conservative
+sensitive
+```
+
+Example command for conservative prompting:
+
+```bash
+python src/vlm_baseline.py \
+  --provider openai \
+  --model gpt-4o-mini \
+  --test_csv data/FracAtlas/test_vlm_balanced_40.csv \
+  --image_dir data/FracAtlas/images \
+  --prompt_mode conservative \
+  --sleep_sec 1 \
+  --output_csv outputs/vlm/openai_conservative_available24.csv
+```
+
+Example command for sensitive prompting:
+
+```bash
+python src/vlm_baseline.py \
+  --provider openai \
+  --model gpt-4o-mini \
+  --test_csv data/FracAtlas/test_vlm_balanced_40.csv \
+  --image_dir data/FracAtlas/images \
+  --prompt_mode sensitive \
+  --sleep_sec 1 \
+  --output_csv outputs/vlm/openai_sensitive_available24.csv
+```
+
+Create a compact VLM prompt summary:
+
+```bash
+cat > outputs/vlm/vlm_prompt_summary.csv <<'CSV'
+model,prompt_mode,n_total_rows,n_valid_predictions,n_failed_predictions,accuracy,precision,recall_sensitivity,specificity,f1_score,roc_auc,true_positives,false_positives,true_negatives,false_negatives
+CSV
+
+tail -n +2 outputs/vlm/openai_simple_available24_fixed_eval/test_metrics.csv >> outputs/vlm/vlm_prompt_summary.csv
+tail -n +2 outputs/vlm/openai_conservative_available24_eval/test_metrics.csv >> outputs/vlm/vlm_prompt_summary.csv
+tail -n +2 outputs/vlm/openai_sensitive_available24_eval/test_metrics.csv >> outputs/vlm/vlm_prompt_summary.csv
+
+cat outputs/vlm/vlm_prompt_summary.csv
+```
+
 ## Results
 
-The following table summarizes the current test-set results.
+### CNN Test-Set Results
+
+The following table summarizes the CNN results on the held-out test set.
 
 | Model | Epochs | Accuracy | Precision | Recall | Specificity | F1-score | ROC-AUC | TP | FP | TN | FN |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -364,9 +533,19 @@ The following table summarizes the current test-set results.
 | ResNet50 | 5 | 0.8581 | 0.5734 | 0.7593 | 0.8792 | 0.6534 | 0.8915 | 82 | 61 | 444 | 26 |
 | DenseNet121 | 5 | 0.8450 | 0.5520 | 0.6389 | 0.8891 | 0.5923 | 0.8558 | 69 | 56 | 449 | 39 |
 
+### VLM Pilot Baseline Results
+
+The following VLM results were produced using `gpt-4o-mini` on the available-image pilot subset. This is a smaller pilot study, not a full replacement for the CNN test-set evaluation.
+
+| Model | Prompt | n | Accuracy | Precision | Recall | Specificity | F1-score | ROC-AUC | TP | FP | TN | FN |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| GPT-4o-mini | simple | 24 | 0.8750 | 0.6667 | 0.5000 | 0.9500 | 0.5714 | 0.6188 | 2 | 1 | 19 | 2 |
+| GPT-4o-mini | conservative | 24 | 0.8750 | 0.6667 | 0.5000 | 0.9500 | 0.5714 | 0.7250 | 2 | 1 | 19 | 2 |
+| GPT-4o-mini | sensitive | 24 | 0.6667 | 0.2500 | 0.5000 | 0.7000 | 0.3333 | 0.6000 | 2 | 6 | 14 | 2 |
+
 ## Result Interpretation
 
-Among the tested models, **ResNet50** achieved the best overall performance.
+Among the CNN models, **ResNet50** achieved the best overall performance.
 
 It had:
 
@@ -380,6 +559,8 @@ This is important because false negatives are especially concerning in fracture 
 
 The pretrained transfer learning models performed better than the custom CNN baseline. This makes sense because the dataset is relatively small compared with large-scale natural image datasets, and pretrained CNN backbones already contain useful visual features such as edges, textures, and shapes.
 
+The VLM pilot baseline showed that a general-purpose zero-shot VLM can produce structured fracture / no-fracture predictions, but it did not outperform the task-specific CNN models on fracture recall. In the available-image pilot subset, all three prompt variants detected only 2 out of 4 fracture-positive examples. The sensitive prompt increased false positives without improving recall, suggesting that prompt wording alone did not solve the missed-fracture problem in this small zero-shot setting.
+
 ## Why Recall Matters
 
 In this project, recall is one of the most important metrics.
@@ -390,7 +571,7 @@ Recall = TP / (TP + FN)
 
 A higher recall means the model catches more actual fracture cases. In medical screening tasks, this is important because missing a fracture can be more harmful than incorrectly flagging a normal image.
 
-False negatives in the current experiments:
+False negatives in the current CNN experiments:
 
 | Model | False Negatives |
 |---|---:|
@@ -399,7 +580,7 @@ False negatives in the current experiments:
 | ResNet50 | 26 |
 | DenseNet121 | 39 |
 
-ResNet50 had the lowest number of false negatives among the current models.
+ResNet50 had the lowest number of false negatives among the current CNN models.
 
 ## Grad-CAM Explainability
 
@@ -426,6 +607,8 @@ The training script includes reproducibility support, including:
 - Saved environment information
 - Saved `requirements.lock`
 - Saved `run_metadata.json`
+- Saved metrics CSV files
+- Saved confusion matrix, ROC curve, and Grad-CAM figures
 
 These files help track how each experiment was produced.
 
@@ -457,11 +640,19 @@ This project has several important limitations:
 
    Even the best current model still misses some fracture cases.
 
+7. **VLM pilot subset is small**
+
+   The VLM baseline currently uses a small available-image subset in the repository environment. Its results should be treated as a pilot comparison, not a full-scale benchmark.
+
+8. **VLMs are not medical diagnostic systems**
+
+   General-purpose multimodal models may produce plausible explanations, but they are not validated for medical image diagnosis in this project.
+
 ## Future Work
 
 Possible improvements include:
 
-- Train all models for more epochs under the same experimental setup
+- Train all CNN models for more epochs under the same experimental setup
 - Tune learning rate, batch size, optimizer, and weight decay
 - Optimize the classification threshold to reduce false negatives
 - Add more model architectures such as EfficientNet or ConvNeXt
@@ -469,6 +660,8 @@ Possible improvements include:
 - Add external validation using another X-ray dataset
 - Use bounding box or segmentation annotations for localization-aware evaluation
 - Compare Grad-CAM heatmaps with ground-truth fracture annotations
+- Expand the VLM baseline to the full held-out test set when all image files are available
+- Compare multiple VLM providers and prompt strategies under the same subset
 - Add a simple web demo for uploading an X-ray and viewing predictions
 - Add automated experiment tracking with TensorBoard or Weights & Biases
 
@@ -482,6 +675,7 @@ Possible improvements include:
 - Scikit-learn
 - Matplotlib
 - Pillow
+- OpenAI / Gemini / Anthropic APIs for optional VLM experiments
 
 ## References
 
@@ -490,6 +684,9 @@ Possible improvements include:
 - PyTorch Documentation.
 - Torchvision Models Documentation.
 - Selvaraju, R. R., et al. “Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization.”
+- OpenAI API documentation for image inputs.
+- Google Gemini API documentation for image understanding.
+- Anthropic Claude documentation for vision inputs.
 
 ## Disclaimer
 
@@ -500,5 +697,3 @@ This project is for educational and research purposes only. It is not intended f
 **Kenneth / Zijian Wang**
 
 Computer Science student interested in artificial intelligence, machine learning, medical imaging, and applied deep learning systems.
-
-Note: The full CSV metadata contains 4,083 image records, but the repository may only include a subset of image files due to repository size limits. For a quick runnable demo, use `dataset_available.csv`, `train_available.csv`, `val_available.csv`, and `test_available.csv`, which are generated from the images currently available in `data/FracAtlas/images/`. To reproduce full training, download the complete FracAtlas image set and place all images under `data/FracAtlas/images/`.
