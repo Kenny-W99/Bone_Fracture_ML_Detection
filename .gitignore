@@ -10,3 +10,5 @@ venv/
 
 outputs/*/requirements.lock
 outputs/smoke_test/
+
+.env
