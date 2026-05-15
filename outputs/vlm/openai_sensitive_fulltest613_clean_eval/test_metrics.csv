@@ -1,0 +1,2 @@
+model,prompt_mode,n_total_rows,n_valid_predictions,n_failed_predictions,accuracy,precision,recall_sensitivity,specificity,f1_score,roc_auc,true_positives,false_positives,true_negatives,false_negatives
+openai:gpt-4o-mini,sensitive,613,613,0,0.8058727569331158,0.43956043956043955,0.37037037037037035,0.899009900990099,0.4020100502512563,0.6356527319398606,40,51,454,68
