@@ -1,0 +1,2 @@
+accuracy,precision,recall_sensitivity,specificity,f1_score,roc_auc,true_positives,false_positives,true_negatives,false_negatives,total_samples
+0.7765089722675367,0.40268456375838924,0.5555555555555556,0.8237623762376237,0.4669260700389105,0.7612577924459114,60,89,416,48,613

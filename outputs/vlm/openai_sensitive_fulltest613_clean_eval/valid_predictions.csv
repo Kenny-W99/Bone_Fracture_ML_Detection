@@ -1,0 +1,3066 @@
+timestamp_utc,provider,model,prompt_mode,filename,image_path,true_label,prediction,fracture_probability,correct,short_reason,raw_response,error
+2026-05-15T02:32:34.462531+00:00,openai,gpt-4o-mini,sensitive,IMG0004260.jpg,data/FracAtlas/images_vlm_clean/IMG0004260.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:32:37.802707+00:00,openai,gpt-4o-mini,sensitive,IMG0000138.jpg,data/FracAtlas/images_vlm_clean/IMG0000138.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:32:40.737528+00:00,openai,gpt-4o-mini,sensitive,IMG0002765.jpg,data/FracAtlas/images_vlm_clean/IMG0002765.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:32:43.820755+00:00,openai,gpt-4o-mini,sensitive,IMG0001610.jpg,data/FracAtlas/images_vlm_clean/IMG0001610.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:32:46.364526+00:00,openai,gpt-4o-mini,sensitive,IMG0002230.jpg,data/FracAtlas/images_vlm_clean/IMG0002230.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:32:49.144848+00:00,openai,gpt-4o-mini,sensitive,IMG0002657.jpg,data/FracAtlas/images_vlm_clean/IMG0002657.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:32:51.974553+00:00,openai,gpt-4o-mini,sensitive,IMG0001285.jpg,data/FracAtlas/images_vlm_clean/IMG0001285.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:32:54.983278+00:00,openai,gpt-4o-mini,sensitive,IMG0002527.jpg,data/FracAtlas/images_vlm_clean/IMG0002527.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:32:58.058130+00:00,openai,gpt-4o-mini,sensitive,IMG0000699.jpg,data/FracAtlas/images_vlm_clean/IMG0000699.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:01.128963+00:00,openai,gpt-4o-mini,sensitive,IMG0003047.jpg,data/FracAtlas/images_vlm_clean/IMG0003047.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:04.097117+00:00,openai,gpt-4o-mini,sensitive,IMG0001748.jpg,data/FracAtlas/images_vlm_clean/IMG0001748.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:06.862359+00:00,openai,gpt-4o-mini,sensitive,IMG0002601.jpg,data/FracAtlas/images_vlm_clean/IMG0002601.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:10.037621+00:00,openai,gpt-4o-mini,sensitive,IMG0002384.jpg,data/FracAtlas/images_vlm_clean/IMG0002384.jpg,1,1,0.85,1,There is visible evidence of a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture.""
+}",
+2026-05-15T02:33:13.108294+00:00,openai,gpt-4o-mini,sensitive,IMG0000900.jpg,data/FracAtlas/images_vlm_clean/IMG0000900.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:33:15.786897+00:00,openai,gpt-4o-mini,sensitive,IMG0002456.jpg,data/FracAtlas/images_vlm_clean/IMG0002456.jpg,1,1,0.75,1,Plausible visual evidence of fracture detected.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""Plausible visual evidence of fracture detected.""
+}",
+2026-05-15T02:33:18.948114+00:00,openai,gpt-4o-mini,sensitive,IMG0001614.jpg,data/FracAtlas/images_vlm_clean/IMG0001614.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:22.223054+00:00,openai,gpt-4o-mini,sensitive,IMG0002747.jpg,data/FracAtlas/images_vlm_clean/IMG0002747.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:24.921978+00:00,openai,gpt-4o-mini,sensitive,IMG0003293.jpg,data/FracAtlas/images_vlm_clean/IMG0003293.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:27.853015+00:00,openai,gpt-4o-mini,sensitive,IMG0001373.jpg,data/FracAtlas/images_vlm_clean/IMG0001373.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:33:30.824302+00:00,openai,gpt-4o-mini,sensitive,IMG0003555.jpg,data/FracAtlas/images_vlm_clean/IMG0003555.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:33:34.598245+00:00,openai,gpt-4o-mini,sensitive,IMG0000319.jpg,data/FracAtlas/images_vlm_clean/IMG0000319.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:37.890092+00:00,openai,gpt-4o-mini,sensitive,IMG0003879.jpg,data/FracAtlas/images_vlm_clean/IMG0003879.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:40.553628+00:00,openai,gpt-4o-mini,sensitive,IMG0002205.jpg,data/FracAtlas/images_vlm_clean/IMG0002205.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:43.421543+00:00,openai,gpt-4o-mini,sensitive,IMG0003644.jpg,data/FracAtlas/images_vlm_clean/IMG0003644.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:46.130915+00:00,openai,gpt-4o-mini,sensitive,IMG0000235.jpg,data/FracAtlas/images_vlm_clean/IMG0000235.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:33:49.359330+00:00,openai,gpt-4o-mini,sensitive,IMG0003540.jpg,data/FracAtlas/images_vlm_clean/IMG0003540.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:33:52.061922+00:00,openai,gpt-4o-mini,sensitive,IMG0001545.jpg,data/FracAtlas/images_vlm_clean/IMG0001545.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:33:54.683419+00:00,openai,gpt-4o-mini,sensitive,IMG0003452.jpg,data/FracAtlas/images_vlm_clean/IMG0003452.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:33:57.243500+00:00,openai,gpt-4o-mini,sensitive,IMG0001783.jpg,data/FracAtlas/images_vlm_clean/IMG0001783.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:34:01.955197+00:00,openai,gpt-4o-mini,sensitive,IMG0001703.jpg,data/FracAtlas/images_vlm_clean/IMG0001703.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:34:05.026360+00:00,openai,gpt-4o-mini,sensitive,IMG0002331.jpg,data/FracAtlas/images_vlm_clean/IMG0002331.jpg,1,1,0.85,1,There is visible evidence of a fracture in the bone structure.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone structure.""
+}",
+2026-05-15T02:34:08.227416+00:00,openai,gpt-4o-mini,sensitive,IMG0003969.jpg,data/FracAtlas/images_vlm_clean/IMG0003969.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:34:11.168727+00:00,openai,gpt-4o-mini,sensitive,IMG0000083.jpg,data/FracAtlas/images_vlm_clean/IMG0000083.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:34:13.495085+00:00,openai,gpt-4o-mini,sensitive,IMG0001412.jpg,data/FracAtlas/images_vlm_clean/IMG0001412.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:34:16.211654+00:00,openai,gpt-4o-mini,sensitive,IMG0001902.jpg,data/FracAtlas/images_vlm_clean/IMG0001902.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:34:19.225699+00:00,openai,gpt-4o-mini,sensitive,IMG0001338.jpg,data/FracAtlas/images_vlm_clean/IMG0001338.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:34:21.819048+00:00,openai,gpt-4o-mini,sensitive,IMG0003588.jpg,data/FracAtlas/images_vlm_clean/IMG0003588.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:34:24.454891+00:00,openai,gpt-4o-mini,sensitive,IMG0001639.jpg,data/FracAtlas/images_vlm_clean/IMG0001639.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:34:27.451902+00:00,openai,gpt-4o-mini,sensitive,IMG0000815.jpg,data/FracAtlas/images_vlm_clean/IMG0000815.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:34:30.934203+00:00,openai,gpt-4o-mini,sensitive,IMG0002438.jpg,data/FracAtlas/images_vlm_clean/IMG0002438.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:34:33.601706+00:00,openai,gpt-4o-mini,sensitive,IMG0001660.jpg,data/FracAtlas/images_vlm_clean/IMG0001660.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:34:36.565995+00:00,openai,gpt-4o-mini,sensitive,IMG0002011.jpg,data/FracAtlas/images_vlm_clean/IMG0002011.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:34:39.357110+00:00,openai,gpt-4o-mini,sensitive,IMG0001029.jpg,data/FracAtlas/images_vlm_clean/IMG0001029.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:34:47.625450+00:00,openai,gpt-4o-mini,sensitive,IMG0000683.jpg,data/FracAtlas/images_vlm_clean/IMG0000683.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:34:50.289210+00:00,openai,gpt-4o-mini,sensitive,IMG0002185.jpg,data/FracAtlas/images_vlm_clean/IMG0002185.jpg,0,1,0.75,0,There are visible signs suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""There are visible signs suggesting a fracture.""
+}",
+2026-05-15T02:34:52.744635+00:00,openai,gpt-4o-mini,sensitive,IMG0003235.jpg,data/FracAtlas/images_vlm_clean/IMG0003235.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:34:55.715076+00:00,openai,gpt-4o-mini,sensitive,IMG0003450.jpg,data/FracAtlas/images_vlm_clean/IMG0003450.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:34:59.094053+00:00,openai,gpt-4o-mini,sensitive,IMG0002307.jpg,data/FracAtlas/images_vlm_clean/IMG0002307.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:35:01.654653+00:00,openai,gpt-4o-mini,sensitive,IMG0002659.jpg,data/FracAtlas/images_vlm_clean/IMG0002659.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:35:04.623936+00:00,openai,gpt-4o-mini,sensitive,IMG0002047.jpg,data/FracAtlas/images_vlm_clean/IMG0002047.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:35:07.038104+00:00,openai,gpt-4o-mini,sensitive,IMG0001861.jpg,data/FracAtlas/images_vlm_clean/IMG0001861.jpg,0,1,0.75,0,There are visible signs suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""There are visible signs suggesting a fracture.""
+}",
+2026-05-15T02:35:10.049840+00:00,openai,gpt-4o-mini,sensitive,IMG0003355.jpg,data/FracAtlas/images_vlm_clean/IMG0003355.jpg,0,1,0.85,0,There is visible evidence of a fracture in the bone structure.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone structure.""
+}",
+2026-05-15T02:35:12.713029+00:00,openai,gpt-4o-mini,sensitive,IMG0002708.jpg,data/FracAtlas/images_vlm_clean/IMG0002708.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:35:15.375516+00:00,openai,gpt-4o-mini,sensitive,IMG0000050.jpg,data/FracAtlas/images_vlm_clean/IMG0000050.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:35:17.991682+00:00,openai,gpt-4o-mini,sensitive,IMG0000782.jpg,data/FracAtlas/images_vlm_clean/IMG0000782.jpg,0,1,0.85,0,There is visible evidence of a fracture in the bone structure.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone structure.""
+}",
+2026-05-15T02:35:20.512948+00:00,openai,gpt-4o-mini,sensitive,IMG0000424.jpg,data/FracAtlas/images_vlm_clean/IMG0000424.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:35:23.162131+00:00,openai,gpt-4o-mini,sensitive,IMG0000038.jpg,data/FracAtlas/images_vlm_clean/IMG0000038.jpg,0,1,0.85,0,There is visible evidence of a fracture in the bone.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone.""
+}",
+2026-05-15T02:35:26.535193+00:00,openai,gpt-4o-mini,sensitive,IMG0001342.jpg,data/FracAtlas/images_vlm_clean/IMG0001342.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:35:29.696539+00:00,openai,gpt-4o-mini,sensitive,IMG0000155.jpg,data/FracAtlas/images_vlm_clean/IMG0000155.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:35:32.297144+00:00,openai,gpt-4o-mini,sensitive,IMG0002306.jpg,data/FracAtlas/images_vlm_clean/IMG0002306.jpg,1,0,0.1,0,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:35:35.718810+00:00,openai,gpt-4o-mini,sensitive,IMG0002300.jpg,data/FracAtlas/images_vlm_clean/IMG0002300.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:35:38.416652+00:00,openai,gpt-4o-mini,sensitive,IMG0002064.jpg,data/FracAtlas/images_vlm_clean/IMG0002064.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:35:41.474020+00:00,openai,gpt-4o-mini,sensitive,IMG0000070.jpg,data/FracAtlas/images_vlm_clean/IMG0000070.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:35:44.471565+00:00,openai,gpt-4o-mini,sensitive,IMG0000921.jpg,data/FracAtlas/images_vlm_clean/IMG0000921.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:35:47.118870+00:00,openai,gpt-4o-mini,sensitive,IMG0001230.jpg,data/FracAtlas/images_vlm_clean/IMG0001230.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:35:50.293277+00:00,openai,gpt-4o-mini,sensitive,IMG0002147.jpg,data/FracAtlas/images_vlm_clean/IMG0002147.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:35:52.749436+00:00,openai,gpt-4o-mini,sensitive,IMG0002257.jpg,data/FracAtlas/images_vlm_clean/IMG0002257.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:35:55.628519+00:00,openai,gpt-4o-mini,sensitive,IMG0000216.jpg,data/FracAtlas/images_vlm_clean/IMG0000216.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:35:58.383428+00:00,openai,gpt-4o-mini,sensitive,IMG0003542.jpg,data/FracAtlas/images_vlm_clean/IMG0003542.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:01.455202+00:00,openai,gpt-4o-mini,sensitive,IMG0000419.jpg,data/FracAtlas/images_vlm_clean/IMG0000419.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:36:04.430565+00:00,openai,gpt-4o-mini,sensitive,IMG0001204.jpg,data/FracAtlas/images_vlm_clean/IMG0001204.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:07.394175+00:00,openai,gpt-4o-mini,sensitive,IMG0000363.jpg,data/FracAtlas/images_vlm_clean/IMG0000363.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:12.719115+00:00,openai,gpt-4o-mini,sensitive,IMG0002868.jpg,data/FracAtlas/images_vlm_clean/IMG0002868.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:36:15.586918+00:00,openai,gpt-4o-mini,sensitive,IMG0003953.jpg,data/FracAtlas/images_vlm_clean/IMG0003953.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:17.940467+00:00,openai,gpt-4o-mini,sensitive,IMG0002219.jpg,data/FracAtlas/images_vlm_clean/IMG0002219.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:20.806591+00:00,openai,gpt-4o-mini,sensitive,IMG0002546.jpg,data/FracAtlas/images_vlm_clean/IMG0002546.jpg,1,0,0.1,0,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:36:23.803508+00:00,openai,gpt-4o-mini,sensitive,IMG0003577.jpg,data/FracAtlas/images_vlm_clean/IMG0003577.jpg,0,1,0.85,0,There is visible evidence of a fracture in the forearm.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the forearm.""
+}",
+2026-05-15T02:36:26.441587+00:00,openai,gpt-4o-mini,sensitive,IMG0003607.jpg,data/FracAtlas/images_vlm_clean/IMG0003607.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:29.205695+00:00,openai,gpt-4o-mini,sensitive,IMG0000592.jpg,data/FracAtlas/images_vlm_clean/IMG0000592.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:36:31.854270+00:00,openai,gpt-4o-mini,sensitive,IMG0001778.jpg,data/FracAtlas/images_vlm_clean/IMG0001778.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:34.464016+00:00,openai,gpt-4o-mini,sensitive,IMG0002196.jpg,data/FracAtlas/images_vlm_clean/IMG0002196.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:37.047170+00:00,openai,gpt-4o-mini,sensitive,IMG0002161.jpg,data/FracAtlas/images_vlm_clean/IMG0002161.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:39.368593+00:00,openai,gpt-4o-mini,sensitive,IMG0001436.jpg,data/FracAtlas/images_vlm_clean/IMG0001436.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:41.987430+00:00,openai,gpt-4o-mini,sensitive,IMG0003236.jpg,data/FracAtlas/images_vlm_clean/IMG0003236.jpg,0,1,0.75,0,There is plausible visual evidence of a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""There is plausible visual evidence of a fracture.""
+}",
+2026-05-15T02:36:45.077181+00:00,openai,gpt-4o-mini,sensitive,IMG0001398.jpg,data/FracAtlas/images_vlm_clean/IMG0001398.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:36:47.631394+00:00,openai,gpt-4o-mini,sensitive,IMG0000849.jpg,data/FracAtlas/images_vlm_clean/IMG0000849.jpg,0,1,0.85,0,There are visible signs suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There are visible signs suggesting a fracture.""
+}",
+2026-05-15T02:36:51.017210+00:00,openai,gpt-4o-mini,sensitive,IMG0001622.jpg,data/FracAtlas/images_vlm_clean/IMG0001622.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:54.580144+00:00,openai,gpt-4o-mini,sensitive,IMG0000563.jpg,data/FracAtlas/images_vlm_clean/IMG0000563.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:56.970032+00:00,openai,gpt-4o-mini,sensitive,IMG0003674.jpg,data/FracAtlas/images_vlm_clean/IMG0003674.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:36:59.617492+00:00,openai,gpt-4o-mini,sensitive,IMG0002044.jpg,data/FracAtlas/images_vlm_clean/IMG0002044.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:37:02.280866+00:00,openai,gpt-4o-mini,sensitive,IMG0002371.jpg,data/FracAtlas/images_vlm_clean/IMG0002371.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:37:05.091329+00:00,openai,gpt-4o-mini,sensitive,IMG0004044.jpg,data/FracAtlas/images_vlm_clean/IMG0004044.jpg,1,1,0.85,1,There is visible evidence of a fracture in the image.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the image.""
+}",
+2026-05-15T02:37:07.707746+00:00,openai,gpt-4o-mini,sensitive,IMG0002983.jpg,data/FracAtlas/images_vlm_clean/IMG0002983.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:37:10.299473+00:00,openai,gpt-4o-mini,sensitive,IMG0001649.jpg,data/FracAtlas/images_vlm_clean/IMG0001649.jpg,0,1,0.75,0,Plausible visual evidence of fracture is present.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""Plausible visual evidence of fracture is present.""
+}",
+2026-05-15T02:37:13.655113+00:00,openai,gpt-4o-mini,sensitive,IMG0003447.jpg,data/FracAtlas/images_vlm_clean/IMG0003447.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:37:15.970829+00:00,openai,gpt-4o-mini,sensitive,IMG0001661.jpg,data/FracAtlas/images_vlm_clean/IMG0001661.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:37:19.075124+00:00,openai,gpt-4o-mini,sensitive,IMG0001877.jpg,data/FracAtlas/images_vlm_clean/IMG0001877.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:37:23.709079+00:00,openai,gpt-4o-mini,sensitive,IMG0001473.jpg,data/FracAtlas/images_vlm_clean/IMG0001473.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:37:27.470565+00:00,openai,gpt-4o-mini,sensitive,IMG0001481.jpg,data/FracAtlas/images_vlm_clean/IMG0001481.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:37:30.338362+00:00,openai,gpt-4o-mini,sensitive,IMG0002400.jpg,data/FracAtlas/images_vlm_clean/IMG0002400.jpg,1,1,0.85,1,Evidence of previous fracture fixation is present.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""Evidence of previous fracture fixation is present.""
+}",
+2026-05-15T02:37:33.021031+00:00,openai,gpt-4o-mini,sensitive,IMG0002408.jpg,data/FracAtlas/images_vlm_clean/IMG0002408.jpg,1,1,0.85,1,There is visible evidence of a fracture in the bone.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone.""
+}",
+2026-05-15T02:37:35.865266+00:00,openai,gpt-4o-mini,sensitive,IMG0001603.jpg,data/FracAtlas/images_vlm_clean/IMG0001603.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:37:38.528414+00:00,openai,gpt-4o-mini,sensitive,IMG0003533.jpg,data/FracAtlas/images_vlm_clean/IMG0003533.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:37:41.602949+00:00,openai,gpt-4o-mini,sensitive,IMG0001140.jpg,data/FracAtlas/images_vlm_clean/IMG0001140.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:37:44.162326+00:00,openai,gpt-4o-mini,sensitive,IMG0002913.jpg,data/FracAtlas/images_vlm_clean/IMG0002913.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:37:46.518754+00:00,openai,gpt-4o-mini,sensitive,IMG0001247.jpg,data/FracAtlas/images_vlm_clean/IMG0001247.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:37:48.975565+00:00,openai,gpt-4o-mini,sensitive,IMG0001256.jpg,data/FracAtlas/images_vlm_clean/IMG0001256.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:37:51.533930+00:00,openai,gpt-4o-mini,sensitive,IMG0001121.jpg,data/FracAtlas/images_vlm_clean/IMG0001121.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:37:55.734736+00:00,openai,gpt-4o-mini,sensitive,IMG0003731.jpg,data/FracAtlas/images_vlm_clean/IMG0003731.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:37:58.181997+00:00,openai,gpt-4o-mini,sensitive,IMG0000168.jpg,data/FracAtlas/images_vlm_clean/IMG0000168.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:38:01.366311+00:00,openai,gpt-4o-mini,sensitive,IMG0001307.jpg,data/FracAtlas/images_vlm_clean/IMG0001307.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:38:04.233449+00:00,openai,gpt-4o-mini,sensitive,IMG0001051.jpg,data/FracAtlas/images_vlm_clean/IMG0001051.jpg,0,1,0.85,0,There are visible signs of previous surgical intervention indicating possible fractures.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There are visible signs of previous surgical intervention indicating possible fractures.""
+}",
+2026-05-15T02:38:06.973034+00:00,openai,gpt-4o-mini,sensitive,IMG0003264.jpg,data/FracAtlas/images_vlm_clean/IMG0003264.jpg,1,1,0.85,1,Plausible visual evidence of fracture is present.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""Plausible visual evidence of fracture is present.""
+}",
+2026-05-15T02:38:09.395055+00:00,openai,gpt-4o-mini,sensitive,IMG0003899.jpg,data/FracAtlas/images_vlm_clean/IMG0003899.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:38:11.750708+00:00,openai,gpt-4o-mini,sensitive,IMG0001812.jpg,data/FracAtlas/images_vlm_clean/IMG0001812.jpg,0,1,0.85,0,There are visible signs suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There are visible signs suggesting a fracture.""
+}",
+2026-05-15T02:38:14.678058+00:00,openai,gpt-4o-mini,sensitive,IMG0003991.jpg,data/FracAtlas/images_vlm_clean/IMG0003991.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:38:17.788612+00:00,openai,gpt-4o-mini,sensitive,IMG0002740.jpg,data/FracAtlas/images_vlm_clean/IMG0002740.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:38:20.205138+00:00,openai,gpt-4o-mini,sensitive,IMG0001817.jpg,data/FracAtlas/images_vlm_clean/IMG0001817.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:38:24.251524+00:00,openai,gpt-4o-mini,sensitive,IMG0002576.jpg,data/FracAtlas/images_vlm_clean/IMG0002576.jpg,1,0,0.1,0,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:38:27.270859+00:00,openai,gpt-4o-mini,sensitive,IMG0001139.jpg,data/FracAtlas/images_vlm_clean/IMG0001139.jpg,0,1,0.85,0,Plausible visual evidence of fracture is present.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""Plausible visual evidence of fracture is present.""
+}",
+2026-05-15T02:38:31.469753+00:00,openai,gpt-4o-mini,sensitive,IMG0000997.jpg,data/FracAtlas/images_vlm_clean/IMG0000997.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:38:34.351135+00:00,openai,gpt-4o-mini,sensitive,IMG0001715.jpg,data/FracAtlas/images_vlm_clean/IMG0001715.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:38:37.308686+00:00,openai,gpt-4o-mini,sensitive,IMG0003054.jpg,data/FracAtlas/images_vlm_clean/IMG0003054.jpg,0,1,0.85,0,There is visible evidence of a fracture in the ankle region.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the ankle region.""
+}",
+2026-05-15T02:38:39.984148+00:00,openai,gpt-4o-mini,sensitive,IMG0001234.jpg,data/FracAtlas/images_vlm_clean/IMG0001234.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:38:43.041145+00:00,openai,gpt-4o-mini,sensitive,IMG0002082.jpg,data/FracAtlas/images_vlm_clean/IMG0002082.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:38:45.603437+00:00,openai,gpt-4o-mini,sensitive,IMG0001760.jpg,data/FracAtlas/images_vlm_clean/IMG0001760.jpg,1,0,0.1,0,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:38:48.675609+00:00,openai,gpt-4o-mini,sensitive,IMG0000022.jpg,data/FracAtlas/images_vlm_clean/IMG0000022.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:38:50.926361+00:00,openai,gpt-4o-mini,sensitive,IMG0000809.jpg,data/FracAtlas/images_vlm_clean/IMG0000809.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:38:53.691202+00:00,openai,gpt-4o-mini,sensitive,IMG0001458.jpg,data/FracAtlas/images_vlm_clean/IMG0001458.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:38:57.054803+00:00,openai,gpt-4o-mini,sensitive,IMG0001431.jpg,data/FracAtlas/images_vlm_clean/IMG0001431.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:38:59.938430+00:00,openai,gpt-4o-mini,sensitive,IMG0003272.jpg,data/FracAtlas/images_vlm_clean/IMG0003272.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:39:02.368269+00:00,openai,gpt-4o-mini,sensitive,IMG0001137.jpg,data/FracAtlas/images_vlm_clean/IMG0001137.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:39:06.050302+00:00,openai,gpt-4o-mini,sensitive,IMG0000825.jpg,data/FracAtlas/images_vlm_clean/IMG0000825.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:39:10.279488+00:00,openai,gpt-4o-mini,sensitive,IMG0003330.jpg,data/FracAtlas/images_vlm_clean/IMG0003330.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:39:12.826081+00:00,openai,gpt-4o-mini,sensitive,IMG0001267.jpg,data/FracAtlas/images_vlm_clean/IMG0001267.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:39:15.912911+00:00,openai,gpt-4o-mini,sensitive,IMG0001768.jpg,data/FracAtlas/images_vlm_clean/IMG0001768.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:39:18.268173+00:00,openai,gpt-4o-mini,sensitive,IMG0001163.jpg,data/FracAtlas/images_vlm_clean/IMG0001163.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:39:21.238148+00:00,openai,gpt-4o-mini,sensitive,IMG0000151.jpg,data/FracAtlas/images_vlm_clean/IMG0000151.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:39:23.592410+00:00,openai,gpt-4o-mini,sensitive,IMG0003791.jpg,data/FracAtlas/images_vlm_clean/IMG0003791.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:39:26.250262+00:00,openai,gpt-4o-mini,sensitive,IMG0001618.jpg,data/FracAtlas/images_vlm_clean/IMG0001618.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:39:28.915964+00:00,openai,gpt-4o-mini,sensitive,IMG0003397.jpg,data/FracAtlas/images_vlm_clean/IMG0003397.jpg,1,0,0.1,0,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:39:32.294532+00:00,openai,gpt-4o-mini,sensitive,IMG0000710.jpg,data/FracAtlas/images_vlm_clean/IMG0000710.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:39:36.083826+00:00,openai,gpt-4o-mini,sensitive,IMG0003547.jpg,data/FracAtlas/images_vlm_clean/IMG0003547.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:39:38.545189+00:00,openai,gpt-4o-mini,sensitive,IMG0001556.jpg,data/FracAtlas/images_vlm_clean/IMG0001556.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:39:42.741219+00:00,openai,gpt-4o-mini,sensitive,IMG0003004.jpg,data/FracAtlas/images_vlm_clean/IMG0003004.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:39:45.787537+00:00,openai,gpt-4o-mini,sensitive,IMG0001107.jpg,data/FracAtlas/images_vlm_clean/IMG0001107.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:39:48.782656+00:00,openai,gpt-4o-mini,sensitive,IMG0002635.jpg,data/FracAtlas/images_vlm_clean/IMG0002635.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:39:51.445513+00:00,openai,gpt-4o-mini,sensitive,IMG0002678.jpg,data/FracAtlas/images_vlm_clean/IMG0002678.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:39:54.211387+00:00,openai,gpt-4o-mini,sensitive,IMG0002889.jpg,data/FracAtlas/images_vlm_clean/IMG0002889.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:39:56.872451+00:00,openai,gpt-4o-mini,sensitive,IMG0003346.jpg,data/FracAtlas/images_vlm_clean/IMG0003346.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:39:59.841680+00:00,openai,gpt-4o-mini,sensitive,IMG0000751.jpg,data/FracAtlas/images_vlm_clean/IMG0000751.jpg,1,0,0.1,0,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:40:02.810864+00:00,openai,gpt-4o-mini,sensitive,IMG0000798.jpg,data/FracAtlas/images_vlm_clean/IMG0000798.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:40:05.765171+00:00,openai,gpt-4o-mini,sensitive,IMG0002318.jpg,data/FracAtlas/images_vlm_clean/IMG0002318.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:09.083339+00:00,openai,gpt-4o-mini,sensitive,IMG0003678.jpg,data/FracAtlas/images_vlm_clean/IMG0003678.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:12.333875+00:00,openai,gpt-4o-mini,sensitive,IMG0000135.jpg,data/FracAtlas/images_vlm_clean/IMG0000135.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:14.791173+00:00,openai,gpt-4o-mini,sensitive,IMG0002670.jpg,data/FracAtlas/images_vlm_clean/IMG0002670.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:17.557734+00:00,openai,gpt-4o-mini,sensitive,IMG0001976.jpg,data/FracAtlas/images_vlm_clean/IMG0001976.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:20.226803+00:00,openai,gpt-4o-mini,sensitive,IMG0003203.jpg,data/FracAtlas/images_vlm_clean/IMG0003203.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:23.278224+00:00,openai,gpt-4o-mini,sensitive,IMG0003468.jpg,data/FracAtlas/images_vlm_clean/IMG0003468.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:25.403604+00:00,openai,gpt-4o-mini,sensitive,IMG0004228.jpg,data/FracAtlas/images_vlm_clean/IMG0004228.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:40:28.314201+00:00,openai,gpt-4o-mini,sensitive,IMG0002376.jpg,data/FracAtlas/images_vlm_clean/IMG0002376.jpg,1,1,0.75,1,There is plausible visual evidence of a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""There is plausible visual evidence of a fracture.""
+}",
+2026-05-15T02:40:32.066976+00:00,openai,gpt-4o-mini,sensitive,IMG0001352.jpg,data/FracAtlas/images_vlm_clean/IMG0001352.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:40:34.740774+00:00,openai,gpt-4o-mini,sensitive,IMG0003105.jpg,data/FracAtlas/images_vlm_clean/IMG0003105.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:38.237614+00:00,openai,gpt-4o-mini,sensitive,IMG0002131.jpg,data/FracAtlas/images_vlm_clean/IMG0002131.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:41.887781+00:00,openai,gpt-4o-mini,sensitive,IMG0001558.jpg,data/FracAtlas/images_vlm_clean/IMG0001558.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:40:44.508302+00:00,openai,gpt-4o-mini,sensitive,IMG0003425.jpg,data/FracAtlas/images_vlm_clean/IMG0003425.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:40:47.803354+00:00,openai,gpt-4o-mini,sensitive,IMG0000130.jpg,data/FracAtlas/images_vlm_clean/IMG0000130.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:40:50.276948+00:00,openai,gpt-4o-mini,sensitive,IMG0001312.jpg,data/FracAtlas/images_vlm_clean/IMG0001312.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:53.422590+00:00,openai,gpt-4o-mini,sensitive,IMG0002848.jpg,data/FracAtlas/images_vlm_clean/IMG0002848.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:56.105224+00:00,openai,gpt-4o-mini,sensitive,IMG0000851.jpg,data/FracAtlas/images_vlm_clean/IMG0000851.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:40:59.191003+00:00,openai,gpt-4o-mini,sensitive,IMG0003217.jpg,data/FracAtlas/images_vlm_clean/IMG0003217.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:41:01.895301+00:00,openai,gpt-4o-mini,sensitive,IMG0002480.jpg,data/FracAtlas/images_vlm_clean/IMG0002480.jpg,1,1,0.85,1,There is visible evidence of a fracture in the bone.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone.""
+}",
+2026-05-15T02:41:04.107235+00:00,openai,gpt-4o-mini,sensitive,IMG0000427.jpg,data/FracAtlas/images_vlm_clean/IMG0000427.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:41:06.298262+00:00,openai,gpt-4o-mini,sensitive,IMG0000253.jpg,data/FracAtlas/images_vlm_clean/IMG0000253.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:41:09.262589+00:00,openai,gpt-4o-mini,sensitive,IMG0000838.jpg,data/FracAtlas/images_vlm_clean/IMG0000838.jpg,0,1,0.75,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:41:12.375720+00:00,openai,gpt-4o-mini,sensitive,IMG0000175.jpg,data/FracAtlas/images_vlm_clean/IMG0000175.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:41:15.821555+00:00,openai,gpt-4o-mini,sensitive,IMG0001572.jpg,data/FracAtlas/images_vlm_clean/IMG0001572.jpg,1,1,0.85,1,There are visible signs suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There are visible signs suggesting a fracture.""
+}",
+2026-05-15T02:41:19.111621+00:00,openai,gpt-4o-mini,sensitive,IMG0001114.jpg,data/FracAtlas/images_vlm_clean/IMG0001114.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:41:22.273437+00:00,openai,gpt-4o-mini,sensitive,IMG0002326.jpg,data/FracAtlas/images_vlm_clean/IMG0002326.jpg,1,1,0.75,1,Plausible visual evidence of fracture is present.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""Plausible visual evidence of fracture is present.""
+}",
+2026-05-15T02:41:25.448107+00:00,openai,gpt-4o-mini,sensitive,IMG0000447.jpg,data/FracAtlas/images_vlm_clean/IMG0000447.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:41:27.904685+00:00,openai,gpt-4o-mini,sensitive,IMG0001270.jpg,data/FracAtlas/images_vlm_clean/IMG0001270.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:41:31.489904+00:00,openai,gpt-4o-mini,sensitive,IMG0000569.jpg,data/FracAtlas/images_vlm_clean/IMG0000569.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:41:34.870880+00:00,openai,gpt-4o-mini,sensitive,IMG0000160.jpg,data/FracAtlas/images_vlm_clean/IMG0000160.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:41:37.634807+00:00,openai,gpt-4o-mini,sensitive,IMG0002097.jpg,data/FracAtlas/images_vlm_clean/IMG0002097.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:41:42.445960+00:00,openai,gpt-4o-mini,sensitive,IMG0002705.jpg,data/FracAtlas/images_vlm_clean/IMG0002705.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:41:46.438747+00:00,openai,gpt-4o-mini,sensitive,IMG0000944.jpg,data/FracAtlas/images_vlm_clean/IMG0000944.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:41:49.717351+00:00,openai,gpt-4o-mini,sensitive,IMG0000096.jpg,data/FracAtlas/images_vlm_clean/IMG0000096.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:41:52.521885+00:00,openai,gpt-4o-mini,sensitive,IMG0003623.jpg,data/FracAtlas/images_vlm_clean/IMG0003623.jpg,0,1,0.85,0,There is visible evidence of a fracture in the bone structure.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone structure.""
+}",
+2026-05-15T02:41:55.862019+00:00,openai,gpt-4o-mini,sensitive,IMG0003142.jpg,data/FracAtlas/images_vlm_clean/IMG0003142.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:41:58.523984+00:00,openai,gpt-4o-mini,sensitive,IMG0000174.jpg,data/FracAtlas/images_vlm_clean/IMG0000174.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:42:01.579621+00:00,openai,gpt-4o-mini,sensitive,IMG0002472.jpg,data/FracAtlas/images_vlm_clean/IMG0002472.jpg,1,1,0.85,1,There is visible evidence of a fracture in the bone.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone.""
+}",
+2026-05-15T02:42:04.769711+00:00,openai,gpt-4o-mini,sensitive,IMG0003057.jpg,data/FracAtlas/images_vlm_clean/IMG0003057.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:42:07.942465+00:00,openai,gpt-4o-mini,sensitive,IMG0000345.jpg,data/FracAtlas/images_vlm_clean/IMG0000345.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:42:11.942145+00:00,openai,gpt-4o-mini,sensitive,IMG0000263.jpg,data/FracAtlas/images_vlm_clean/IMG0000263.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:42:14.474938+00:00,openai,gpt-4o-mini,sensitive,IMG0002721.jpg,data/FracAtlas/images_vlm_clean/IMG0002721.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:42:17.430911+00:00,openai,gpt-4o-mini,sensitive,IMG0002030.jpg,data/FracAtlas/images_vlm_clean/IMG0002030.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:42:20.270952+00:00,openai,gpt-4o-mini,sensitive,IMG0000696.jpg,data/FracAtlas/images_vlm_clean/IMG0000696.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:42:23.620026+00:00,openai,gpt-4o-mini,sensitive,IMG0000426.jpg,data/FracAtlas/images_vlm_clean/IMG0000426.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:42:26.277514+00:00,openai,gpt-4o-mini,sensitive,IMG0003021.jpg,data/FracAtlas/images_vlm_clean/IMG0003021.jpg,1,0,0.1,0,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:42:29.446674+00:00,openai,gpt-4o-mini,sensitive,IMG0003108.jpg,data/FracAtlas/images_vlm_clean/IMG0003108.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:42:32.724431+00:00,openai,gpt-4o-mini,sensitive,IMG0000727.jpg,data/FracAtlas/images_vlm_clean/IMG0000727.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:42:35.387041+00:00,openai,gpt-4o-mini,sensitive,IMG0001832.jpg,data/FracAtlas/images_vlm_clean/IMG0001832.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:42:38.130901+00:00,openai,gpt-4o-mini,sensitive,IMG0003818.jpg,data/FracAtlas/images_vlm_clean/IMG0003818.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:42:40.915227+00:00,openai,gpt-4o-mini,sensitive,IMG0000964.jpg,data/FracAtlas/images_vlm_clean/IMG0000964.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:42:43.579809+00:00,openai,gpt-4o-mini,sensitive,IMG0002800.jpg,data/FracAtlas/images_vlm_clean/IMG0002800.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:42:46.202820+00:00,openai,gpt-4o-mini,sensitive,IMG0003202.jpg,data/FracAtlas/images_vlm_clean/IMG0003202.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:42:48.566659+00:00,openai,gpt-4o-mini,sensitive,IMG0003044.jpg,data/FracAtlas/images_vlm_clean/IMG0003044.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:42:51.465020+00:00,openai,gpt-4o-mini,sensitive,IMG0000864.jpg,data/FracAtlas/images_vlm_clean/IMG0000864.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:42:53.644131+00:00,openai,gpt-4o-mini,sensitive,IMG0001440.jpg,data/FracAtlas/images_vlm_clean/IMG0001440.jpg,1,0,0.1,0,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:42:56.450131+00:00,openai,gpt-4o-mini,sensitive,IMG0003988.jpg,data/FracAtlas/images_vlm_clean/IMG0003988.jpg,0,1,0.85,0,Plausible visual evidence of fracture is present.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""Plausible visual evidence of fracture is present.""
+}",
+2026-05-15T02:42:59.349994+00:00,openai,gpt-4o-mini,sensitive,IMG0003903.jpg,data/FracAtlas/images_vlm_clean/IMG0003903.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:01.975192+00:00,openai,gpt-4o-mini,sensitive,IMG0002164.jpg,data/FracAtlas/images_vlm_clean/IMG0002164.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:04.775924+00:00,openai,gpt-4o-mini,sensitive,IMG0003881.jpg,data/FracAtlas/images_vlm_clean/IMG0003881.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:07.819234+00:00,openai,gpt-4o-mini,sensitive,IMG0000244.jpg,data/FracAtlas/images_vlm_clean/IMG0000244.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:43:10.311761+00:00,openai,gpt-4o-mini,sensitive,IMG0004285.jpg,data/FracAtlas/images_vlm_clean/IMG0004285.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:12.662078+00:00,openai,gpt-4o-mini,sensitive,IMG0001438.jpg,data/FracAtlas/images_vlm_clean/IMG0001438.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:15.835912+00:00,openai,gpt-4o-mini,sensitive,IMG0003103.jpg,data/FracAtlas/images_vlm_clean/IMG0003103.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:18.907836+00:00,openai,gpt-4o-mini,sensitive,IMG0001821.jpg,data/FracAtlas/images_vlm_clean/IMG0001821.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:21.570615+00:00,openai,gpt-4o-mini,sensitive,IMG0001404.jpg,data/FracAtlas/images_vlm_clean/IMG0001404.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:24.743614+00:00,openai,gpt-4o-mini,sensitive,IMG0004010.jpg,data/FracAtlas/images_vlm_clean/IMG0004010.jpg,1,1,0.85,1,There is visible evidence of a fracture in the wrist area.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the wrist area.""
+}",
+2026-05-15T02:43:26.914772+00:00,openai,gpt-4o-mini,sensitive,IMG0001239.jpg,data/FracAtlas/images_vlm_clean/IMG0001239.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:43:29.896129+00:00,openai,gpt-4o-mini,sensitive,IMG0004185.jpg,data/FracAtlas/images_vlm_clean/IMG0004185.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:43:32.673989+00:00,openai,gpt-4o-mini,sensitive,IMG0003745.jpg,data/FracAtlas/images_vlm_clean/IMG0003745.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:34.982386+00:00,openai,gpt-4o-mini,sensitive,IMG0001801.jpg,data/FracAtlas/images_vlm_clean/IMG0001801.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:43:37.953218+00:00,openai,gpt-4o-mini,sensitive,IMG0003560.jpg,data/FracAtlas/images_vlm_clean/IMG0003560.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:40.514551+00:00,openai,gpt-4o-mini,sensitive,IMG0003351.jpg,data/FracAtlas/images_vlm_clean/IMG0003351.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:43.484369+00:00,openai,gpt-4o-mini,sensitive,IMG0001146.jpg,data/FracAtlas/images_vlm_clean/IMG0001146.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:45.940663+00:00,openai,gpt-4o-mini,sensitive,IMG0003315.jpg,data/FracAtlas/images_vlm_clean/IMG0003315.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:48.909813+00:00,openai,gpt-4o-mini,sensitive,IMG0001236.jpg,data/FracAtlas/images_vlm_clean/IMG0001236.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:51.880743+00:00,openai,gpt-4o-mini,sensitive,IMG0003980.jpg,data/FracAtlas/images_vlm_clean/IMG0003980.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:43:54.338031+00:00,openai,gpt-4o-mini,sensitive,IMG0003062.jpg,data/FracAtlas/images_vlm_clean/IMG0003062.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:43:57.305594+00:00,openai,gpt-4o-mini,sensitive,IMG0002508.jpg,data/FracAtlas/images_vlm_clean/IMG0002508.jpg,1,1,0.85,1,There is visible evidence of a fracture in the forearm.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the forearm.""
+}",
+2026-05-15T02:43:59.764555+00:00,openai,gpt-4o-mini,sensitive,IMG0003015.jpg,data/FracAtlas/images_vlm_clean/IMG0003015.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:44:02.735659+00:00,openai,gpt-4o-mini,sensitive,IMG0002941.jpg,data/FracAtlas/images_vlm_clean/IMG0002941.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:44:05.191548+00:00,openai,gpt-4o-mini,sensitive,IMG0000519.jpg,data/FracAtlas/images_vlm_clean/IMG0000519.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:44:08.573722+00:00,openai,gpt-4o-mini,sensitive,IMG0002962.jpg,data/FracAtlas/images_vlm_clean/IMG0002962.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:44:11.438999+00:00,openai,gpt-4o-mini,sensitive,IMG0002344.jpg,data/FracAtlas/images_vlm_clean/IMG0002344.jpg,1,1,0.85,1,There are visible signs of a fracture in the ankle region.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There are visible signs of a fracture in the ankle region.""
+}",
+2026-05-15T02:44:14.223335+00:00,openai,gpt-4o-mini,sensitive,IMG0000993.jpg,data/FracAtlas/images_vlm_clean/IMG0000993.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:44:17.273820+00:00,openai,gpt-4o-mini,sensitive,IMG0002486.jpg,data/FracAtlas/images_vlm_clean/IMG0002486.jpg,1,0,0.1,0,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:44:19.834877+00:00,openai,gpt-4o-mini,sensitive,IMG0000019.jpg,data/FracAtlas/images_vlm_clean/IMG0000019.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:44:23.215309+00:00,openai,gpt-4o-mini,sensitive,IMG0002348.jpg,data/FracAtlas/images_vlm_clean/IMG0002348.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:44:27.412800+00:00,openai,gpt-4o-mini,sensitive,IMG0001097.jpg,data/FracAtlas/images_vlm_clean/IMG0001097.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:44:29.664197+00:00,openai,gpt-4o-mini,sensitive,IMG0000688.jpg,data/FracAtlas/images_vlm_clean/IMG0000688.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:44:31.926489+00:00,openai,gpt-4o-mini,sensitive,IMG0002105.jpg,data/FracAtlas/images_vlm_clean/IMG0002105.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:44:35.091512+00:00,openai,gpt-4o-mini,sensitive,IMG0000167.jpg,data/FracAtlas/images_vlm_clean/IMG0000167.jpg,0,1,0.75,0,There are visible signs suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""There are visible signs suggesting a fracture.""
+}",
+2026-05-15T02:44:37.651620+00:00,openai,gpt-4o-mini,sensitive,IMG0004189.jpg,data/FracAtlas/images_vlm_clean/IMG0004189.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:44:40.979514+00:00,openai,gpt-4o-mini,sensitive,IMG0004159.jpg,data/FracAtlas/images_vlm_clean/IMG0004159.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:44:43.489936+00:00,openai,gpt-4o-mini,sensitive,IMG0001243.jpg,data/FracAtlas/images_vlm_clean/IMG0001243.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:44:46.766585+00:00,openai,gpt-4o-mini,sensitive,IMG0001302.jpg,data/FracAtlas/images_vlm_clean/IMG0001302.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:44:49.426661+00:00,openai,gpt-4o-mini,sensitive,IMG0003801.jpg,data/FracAtlas/images_vlm_clean/IMG0003801.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:44:52.807958+00:00,openai,gpt-4o-mini,sensitive,IMG0001242.jpg,data/FracAtlas/images_vlm_clean/IMG0001242.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:44:55.676379+00:00,openai,gpt-4o-mini,sensitive,IMG0000400.jpg,data/FracAtlas/images_vlm_clean/IMG0000400.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:44:58.440226+00:00,openai,gpt-4o-mini,sensitive,IMG0004061.jpg,data/FracAtlas/images_vlm_clean/IMG0004061.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:01.409639+00:00,openai,gpt-4o-mini,sensitive,IMG0001054.jpg,data/FracAtlas/images_vlm_clean/IMG0001054.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:03.765963+00:00,openai,gpt-4o-mini,sensitive,IMG0001463.jpg,data/FracAtlas/images_vlm_clean/IMG0001463.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:45:06.227945+00:00,openai,gpt-4o-mini,sensitive,IMG0001933.jpg,data/FracAtlas/images_vlm_clean/IMG0001933.jpg,1,1,0.85,1,There is visible evidence of a fracture in the forearm.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the forearm.""
+}",
+2026-05-15T02:45:09.415537+00:00,openai,gpt-4o-mini,sensitive,IMG0000418.jpg,data/FracAtlas/images_vlm_clean/IMG0000418.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:12.215221+00:00,openai,gpt-4o-mini,sensitive,IMG0002835.jpg,data/FracAtlas/images_vlm_clean/IMG0002835.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:15.237777+00:00,openai,gpt-4o-mini,sensitive,IMG0001071.jpg,data/FracAtlas/images_vlm_clean/IMG0001071.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:45:18.241021+00:00,openai,gpt-4o-mini,sensitive,IMG0001095.jpg,data/FracAtlas/images_vlm_clean/IMG0001095.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:21.377536+00:00,openai,gpt-4o-mini,sensitive,IMG0002991.jpg,data/FracAtlas/images_vlm_clean/IMG0002991.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:45:24.144623+00:00,openai,gpt-4o-mini,sensitive,IMG0001226.jpg,data/FracAtlas/images_vlm_clean/IMG0001226.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:45:26.703066+00:00,openai,gpt-4o-mini,sensitive,IMG0003950.jpg,data/FracAtlas/images_vlm_clean/IMG0003950.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:29.485159+00:00,openai,gpt-4o-mini,sensitive,IMG0003122.jpg,data/FracAtlas/images_vlm_clean/IMG0003122.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:45:32.390006+00:00,openai,gpt-4o-mini,sensitive,IMG0000430.jpg,data/FracAtlas/images_vlm_clean/IMG0000430.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:35.201989+00:00,openai,gpt-4o-mini,sensitive,IMG0004310.jpg,data/FracAtlas/images_vlm_clean/IMG0004310.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:37.864121+00:00,openai,gpt-4o-mini,sensitive,IMG0004079.jpg,data/FracAtlas/images_vlm_clean/IMG0004079.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:45:41.857835+00:00,openai,gpt-4o-mini,sensitive,IMG0003366.jpg,data/FracAtlas/images_vlm_clean/IMG0003366.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:45:44.600300+00:00,openai,gpt-4o-mini,sensitive,IMG0000362.jpg,data/FracAtlas/images_vlm_clean/IMG0000362.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:45:46.793412+00:00,openai,gpt-4o-mini,sensitive,IMG0000936.jpg,data/FracAtlas/images_vlm_clean/IMG0000936.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:49.317650+00:00,openai,gpt-4o-mini,sensitive,IMG0002947.jpg,data/FracAtlas/images_vlm_clean/IMG0002947.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:52.161850+00:00,openai,gpt-4o-mini,sensitive,IMG0002437.jpg,data/FracAtlas/images_vlm_clean/IMG0002437.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:57.004901+00:00,openai,gpt-4o-mini,sensitive,IMG0002410.jpg,data/FracAtlas/images_vlm_clean/IMG0002410.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:45:59.880302+00:00,openai,gpt-4o-mini,sensitive,IMG0003740.jpg,data/FracAtlas/images_vlm_clean/IMG0003740.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:46:02.546081+00:00,openai,gpt-4o-mini,sensitive,IMG0002050.jpg,data/FracAtlas/images_vlm_clean/IMG0002050.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:46:08.654887+00:00,openai,gpt-4o-mini,sensitive,IMG0003299.jpg,data/FracAtlas/images_vlm_clean/IMG0003299.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:46:11.834788+00:00,openai,gpt-4o-mini,sensitive,IMG0000657.jpg,data/FracAtlas/images_vlm_clean/IMG0000657.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:46:14.193072+00:00,openai,gpt-4o-mini,sensitive,IMG0003570.jpg,data/FracAtlas/images_vlm_clean/IMG0003570.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:46:16.638579+00:00,openai,gpt-4o-mini,sensitive,IMG0002352.jpg,data/FracAtlas/images_vlm_clean/IMG0002352.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:46:19.809467+00:00,openai,gpt-4o-mini,sensitive,IMG0002470.jpg,data/FracAtlas/images_vlm_clean/IMG0002470.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:46:23.978223+00:00,openai,gpt-4o-mini,sensitive,IMG0002700.jpg,data/FracAtlas/images_vlm_clean/IMG0002700.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:46:26.610370+00:00,openai,gpt-4o-mini,sensitive,IMG0003250.jpg,data/FracAtlas/images_vlm_clean/IMG0003250.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:46:29.801058+00:00,openai,gpt-4o-mini,sensitive,IMG0000049.jpg,data/FracAtlas/images_vlm_clean/IMG0000049.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:46:32.206500+00:00,openai,gpt-4o-mini,sensitive,IMG0002998.jpg,data/FracAtlas/images_vlm_clean/IMG0002998.jpg,1,0,0.1,0,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:46:34.922890+00:00,openai,gpt-4o-mini,sensitive,IMG0001007.jpg,data/FracAtlas/images_vlm_clean/IMG0001007.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:46:37.278523+00:00,openai,gpt-4o-mini,sensitive,IMG0003131.jpg,data/FracAtlas/images_vlm_clean/IMG0003131.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:46:40.349678+00:00,openai,gpt-4o-mini,sensitive,IMG0001401.jpg,data/FracAtlas/images_vlm_clean/IMG0001401.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:46:43.526030+00:00,openai,gpt-4o-mini,sensitive,IMG0001200.jpg,data/FracAtlas/images_vlm_clean/IMG0001200.jpg,1,0,0.1,0,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:46:46.512663+00:00,openai,gpt-4o-mini,sensitive,IMG0000530.jpg,data/FracAtlas/images_vlm_clean/IMG0000530.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:46:49.464044+00:00,openai,gpt-4o-mini,sensitive,IMG0003110.jpg,data/FracAtlas/images_vlm_clean/IMG0003110.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:46:51.924020+00:00,openai,gpt-4o-mini,sensitive,IMG0003809.jpg,data/FracAtlas/images_vlm_clean/IMG0003809.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:46:54.582297+00:00,openai,gpt-4o-mini,sensitive,IMG0002111.jpg,data/FracAtlas/images_vlm_clean/IMG0002111.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:46:59.049304+00:00,openai,gpt-4o-mini,sensitive,IMG0001306.jpg,data/FracAtlas/images_vlm_clean/IMG0001306.jpg,0,1,0.75,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:47:01.616018+00:00,openai,gpt-4o-mini,sensitive,IMG0003743.jpg,data/FracAtlas/images_vlm_clean/IMG0003743.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:47:03.802626+00:00,openai,gpt-4o-mini,sensitive,IMG0000674.jpg,data/FracAtlas/images_vlm_clean/IMG0000674.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:47:06.566672+00:00,openai,gpt-4o-mini,sensitive,IMG0003120.jpg,data/FracAtlas/images_vlm_clean/IMG0003120.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:47:09.741363+00:00,openai,gpt-4o-mini,sensitive,IMG0003077.jpg,data/FracAtlas/images_vlm_clean/IMG0003077.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:47:11.994008+00:00,openai,gpt-4o-mini,sensitive,IMG0002287.jpg,data/FracAtlas/images_vlm_clean/IMG0002287.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:47:14.601507+00:00,openai,gpt-4o-mini,sensitive,IMG0003119.jpg,data/FracAtlas/images_vlm_clean/IMG0003119.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:47:17.828578+00:00,openai,gpt-4o-mini,sensitive,IMG0000156.jpg,data/FracAtlas/images_vlm_clean/IMG0000156.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:47:20.800548+00:00,openai,gpt-4o-mini,sensitive,IMG0001824.jpg,data/FracAtlas/images_vlm_clean/IMG0001824.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:47:24.079291+00:00,openai,gpt-4o-mini,sensitive,IMG0000672.jpg,data/FracAtlas/images_vlm_clean/IMG0000672.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:47:27.763703+00:00,openai,gpt-4o-mini,sensitive,IMG0002241.jpg,data/FracAtlas/images_vlm_clean/IMG0002241.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:47:30.177111+00:00,openai,gpt-4o-mini,sensitive,IMG0003845.jpg,data/FracAtlas/images_vlm_clean/IMG0003845.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:47:33.601746+00:00,openai,gpt-4o-mini,sensitive,IMG0000040.jpg,data/FracAtlas/images_vlm_clean/IMG0000040.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:47:35.980939+00:00,openai,gpt-4o-mini,sensitive,IMG0000969.jpg,data/FracAtlas/images_vlm_clean/IMG0000969.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:47:38.618987+00:00,openai,gpt-4o-mini,sensitive,IMG0000402.jpg,data/FracAtlas/images_vlm_clean/IMG0000402.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:47:41.486507+00:00,openai,gpt-4o-mini,sensitive,IMG0003133.jpg,data/FracAtlas/images_vlm_clean/IMG0003133.jpg,0,1,0.85,0,There is visible evidence of a fracture in the bone.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone.""
+}",
+2026-05-15T02:47:44.102221+00:00,openai,gpt-4o-mini,sensitive,IMG0001065.jpg,data/FracAtlas/images_vlm_clean/IMG0001065.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:47:48.680541+00:00,openai,gpt-4o-mini,sensitive,IMG0000842.jpg,data/FracAtlas/images_vlm_clean/IMG0000842.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:47:51.424781+00:00,openai,gpt-4o-mini,sensitive,IMG0002566.jpg,data/FracAtlas/images_vlm_clean/IMG0002566.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:47:54.183144+00:00,openai,gpt-4o-mini,sensitive,IMG0000097.jpg,data/FracAtlas/images_vlm_clean/IMG0000097.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:47:56.641749+00:00,openai,gpt-4o-mini,sensitive,IMG0002871.jpg,data/FracAtlas/images_vlm_clean/IMG0002871.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:47:59.304568+00:00,openai,gpt-4o-mini,sensitive,IMG0001225.jpg,data/FracAtlas/images_vlm_clean/IMG0001225.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:48:02.376176+00:00,openai,gpt-4o-mini,sensitive,IMG0000823.jpg,data/FracAtlas/images_vlm_clean/IMG0000823.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:48:05.037443+00:00,openai,gpt-4o-mini,sensitive,IMG0002483.jpg,data/FracAtlas/images_vlm_clean/IMG0002483.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:48:07.701107+00:00,openai,gpt-4o-mini,sensitive,IMG0001205.jpg,data/FracAtlas/images_vlm_clean/IMG0001205.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:48:10.262009+00:00,openai,gpt-4o-mini,sensitive,IMG0000665.jpg,data/FracAtlas/images_vlm_clean/IMG0000665.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:48:12.932075+00:00,openai,gpt-4o-mini,sensitive,IMG0003260.jpg,data/FracAtlas/images_vlm_clean/IMG0003260.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:48:17.633453+00:00,openai,gpt-4o-mini,sensitive,IMG0001974.jpg,data/FracAtlas/images_vlm_clean/IMG0001974.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:48:20.376682+00:00,openai,gpt-4o-mini,sensitive,IMG0001920.jpg,data/FracAtlas/images_vlm_clean/IMG0001920.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:48:23.061419+00:00,openai,gpt-4o-mini,sensitive,IMG0000081.jpg,data/FracAtlas/images_vlm_clean/IMG0000081.jpg,0,1,0.85,0,Plausible visual evidence of fracture is present.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""Plausible visual evidence of fracture is present.""
+}",
+2026-05-15T02:48:25.599765+00:00,openai,gpt-4o-mini,sensitive,IMG0003855.jpg,data/FracAtlas/images_vlm_clean/IMG0003855.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:48:28.078606+00:00,openai,gpt-4o-mini,sensitive,IMG0003123.jpg,data/FracAtlas/images_vlm_clean/IMG0003123.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:48:31.150772+00:00,openai,gpt-4o-mini,sensitive,IMG0004389.jpg,data/FracAtlas/images_vlm_clean/IMG0004389.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:48:33.811724+00:00,openai,gpt-4o-mini,sensitive,IMG0000773.jpg,data/FracAtlas/images_vlm_clean/IMG0000773.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:48:36.802191+00:00,openai,gpt-4o-mini,sensitive,IMG0000197.jpg,data/FracAtlas/images_vlm_clean/IMG0000197.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:48:39.853176+00:00,openai,gpt-4o-mini,sensitive,IMG0000690.jpg,data/FracAtlas/images_vlm_clean/IMG0000690.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:48:43.336119+00:00,openai,gpt-4o-mini,sensitive,IMG0000148.jpg,data/FracAtlas/images_vlm_clean/IMG0000148.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:48:45.695868+00:00,openai,gpt-4o-mini,sensitive,IMG0001468.jpg,data/FracAtlas/images_vlm_clean/IMG0001468.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:48:49.068852+00:00,openai,gpt-4o-mini,sensitive,IMG0001705.jpg,data/FracAtlas/images_vlm_clean/IMG0001705.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:48:52.181165+00:00,openai,gpt-4o-mini,sensitive,IMG0001825.jpg,data/FracAtlas/images_vlm_clean/IMG0001825.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:48:54.805386+00:00,openai,gpt-4o-mini,sensitive,IMG0003529.jpg,data/FracAtlas/images_vlm_clean/IMG0003529.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:48:57.978962+00:00,openai,gpt-4o-mini,sensitive,IMG0000037.jpg,data/FracAtlas/images_vlm_clean/IMG0000037.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:49:01.052354+00:00,openai,gpt-4o-mini,sensitive,IMG0002632.jpg,data/FracAtlas/images_vlm_clean/IMG0002632.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:49:04.735749+00:00,openai,gpt-4o-mini,sensitive,IMG0002596.jpg,data/FracAtlas/images_vlm_clean/IMG0002596.jpg,1,1,0.85,1,Visible hardware suggests previous fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""Visible hardware suggests previous fracture.""
+}",
+2026-05-15T02:49:09.809996+00:00,openai,gpt-4o-mini,sensitive,IMG0002106.jpg,data/FracAtlas/images_vlm_clean/IMG0002106.jpg,1,0,0.1,0,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:49:12.232105+00:00,openai,gpt-4o-mini,sensitive,IMG0000677.jpg,data/FracAtlas/images_vlm_clean/IMG0000677.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:49:15.014961+00:00,openai,gpt-4o-mini,sensitive,IMG0000497.jpg,data/FracAtlas/images_vlm_clean/IMG0000497.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:49:17.843682+00:00,openai,gpt-4o-mini,sensitive,IMG0001998.jpg,data/FracAtlas/images_vlm_clean/IMG0001998.jpg,0,1,0.85,0,There is visible evidence of a fracture in the image.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the image.""
+}",
+2026-05-15T02:49:21.017240+00:00,openai,gpt-4o-mini,sensitive,IMG0002638.jpg,data/FracAtlas/images_vlm_clean/IMG0002638.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:49:23.682323+00:00,openai,gpt-4o-mini,sensitive,IMG0000829.jpg,data/FracAtlas/images_vlm_clean/IMG0000829.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:49:26.078708+00:00,openai,gpt-4o-mini,sensitive,IMG0002767.jpg,data/FracAtlas/images_vlm_clean/IMG0002767.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:49:28.706761+00:00,openai,gpt-4o-mini,sensitive,IMG0003011.jpg,data/FracAtlas/images_vlm_clean/IMG0003011.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:49:31.463282+00:00,openai,gpt-4o-mini,sensitive,IMG0001357.jpg,data/FracAtlas/images_vlm_clean/IMG0001357.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:49:34.230195+00:00,openai,gpt-4o-mini,sensitive,IMG0002327.jpg,data/FracAtlas/images_vlm_clean/IMG0002327.jpg,1,0,0.1,0,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:49:36.584049+00:00,openai,gpt-4o-mini,sensitive,IMG0000571.jpg,data/FracAtlas/images_vlm_clean/IMG0000571.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:49:39.516484+00:00,openai,gpt-4o-mini,sensitive,IMG0000342.jpg,data/FracAtlas/images_vlm_clean/IMG0000342.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:49:42.315883+00:00,openai,gpt-4o-mini,sensitive,IMG0000826.jpg,data/FracAtlas/images_vlm_clean/IMG0000826.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:49:46.824886+00:00,openai,gpt-4o-mini,sensitive,IMG0000125.jpg,data/FracAtlas/images_vlm_clean/IMG0000125.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:49:49.526565+00:00,openai,gpt-4o-mini,sensitive,IMG0001964.jpg,data/FracAtlas/images_vlm_clean/IMG0001964.jpg,1,0,0.1,0,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:49:51.979925+00:00,openai,gpt-4o-mini,sensitive,IMG0001418.jpg,data/FracAtlas/images_vlm_clean/IMG0001418.jpg,0,1,0.75,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:49:54.913666+00:00,openai,gpt-4o-mini,sensitive,IMG0000583.jpg,data/FracAtlas/images_vlm_clean/IMG0000583.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:49:57.882835+00:00,openai,gpt-4o-mini,sensitive,IMG0000882.jpg,data/FracAtlas/images_vlm_clean/IMG0000882.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:50:00.707787+00:00,openai,gpt-4o-mini,sensitive,IMG0003750.jpg,data/FracAtlas/images_vlm_clean/IMG0003750.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:50:03.103353+00:00,openai,gpt-4o-mini,sensitive,IMG0000689.jpg,data/FracAtlas/images_vlm_clean/IMG0000689.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:50:05.845666+00:00,openai,gpt-4o-mini,sensitive,IMG0001807.jpg,data/FracAtlas/images_vlm_clean/IMG0001807.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:50:08.227290+00:00,openai,gpt-4o-mini,sensitive,IMG0001672.jpg,data/FracAtlas/images_vlm_clean/IMG0001672.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:50:10.786558+00:00,openai,gpt-4o-mini,sensitive,IMG0002643.jpg,data/FracAtlas/images_vlm_clean/IMG0002643.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:50:13.610339+00:00,openai,gpt-4o-mini,sensitive,IMG0003486.jpg,data/FracAtlas/images_vlm_clean/IMG0003486.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:50:16.215093+00:00,openai,gpt-4o-mini,sensitive,IMG0001212.jpg,data/FracAtlas/images_vlm_clean/IMG0001212.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:50:19.185267+00:00,openai,gpt-4o-mini,sensitive,IMG0001271.jpg,data/FracAtlas/images_vlm_clean/IMG0001271.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:50:21.846808+00:00,openai,gpt-4o-mini,sensitive,IMG0000918.jpg,data/FracAtlas/images_vlm_clean/IMG0000918.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:50:24.505857+00:00,openai,gpt-4o-mini,sensitive,IMG0003772.jpg,data/FracAtlas/images_vlm_clean/IMG0003772.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:50:27.682196+00:00,openai,gpt-4o-mini,sensitive,IMG0000072.jpg,data/FracAtlas/images_vlm_clean/IMG0000072.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:50:30.858084+00:00,openai,gpt-4o-mini,sensitive,IMG0001382.jpg,data/FracAtlas/images_vlm_clean/IMG0001382.jpg,1,1,0.85,1,There are visible signs suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There are visible signs suggesting a fracture.""
+}",
+2026-05-15T02:50:33.723647+00:00,openai,gpt-4o-mini,sensitive,IMG0001278.jpg,data/FracAtlas/images_vlm_clean/IMG0001278.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:50:36.671640+00:00,openai,gpt-4o-mini,sensitive,IMG0000766.jpg,data/FracAtlas/images_vlm_clean/IMG0000766.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:50:40.482453+00:00,openai,gpt-4o-mini,sensitive,IMG0003512.jpg,data/FracAtlas/images_vlm_clean/IMG0003512.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:50:46.288327+00:00,openai,gpt-4o-mini,sensitive,IMG0000344.jpg,data/FracAtlas/images_vlm_clean/IMG0000344.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:50:49.596892+00:00,openai,gpt-4o-mini,sensitive,IMG0000512.jpg,data/FracAtlas/images_vlm_clean/IMG0000512.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:50:52.180900+00:00,openai,gpt-4o-mini,sensitive,IMG0001597.jpg,data/FracAtlas/images_vlm_clean/IMG0001597.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:50:56.763102+00:00,openai,gpt-4o-mini,sensitive,IMG0003412.jpg,data/FracAtlas/images_vlm_clean/IMG0003412.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:50:59.427002+00:00,openai,gpt-4o-mini,sensitive,IMG0003693.jpg,data/FracAtlas/images_vlm_clean/IMG0003693.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:51:02.165289+00:00,openai,gpt-4o-mini,sensitive,IMG0001995.jpg,data/FracAtlas/images_vlm_clean/IMG0001995.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:51:04.776602+00:00,openai,gpt-4o-mini,sensitive,IMG0003469.jpg,data/FracAtlas/images_vlm_clean/IMG0003469.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:51:09.254171+00:00,openai,gpt-4o-mini,sensitive,IMG0000016.jpg,data/FracAtlas/images_vlm_clean/IMG0000016.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:51:12.102268+00:00,openai,gpt-4o-mini,sensitive,IMG0001326.jpg,data/FracAtlas/images_vlm_clean/IMG0001326.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:51:14.894708+00:00,openai,gpt-4o-mini,sensitive,IMG0003784.jpg,data/FracAtlas/images_vlm_clean/IMG0003784.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:51:17.344015+00:00,openai,gpt-4o-mini,sensitive,IMG0001216.jpg,data/FracAtlas/images_vlm_clean/IMG0001216.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:51:19.840009+00:00,openai,gpt-4o-mini,sensitive,IMG0000673.jpg,data/FracAtlas/images_vlm_clean/IMG0000673.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:51:22.716255+00:00,openai,gpt-4o-mini,sensitive,IMG0003361.jpg,data/FracAtlas/images_vlm_clean/IMG0003361.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:51:25.351758+00:00,openai,gpt-4o-mini,sensitive,IMG0002278.jpg,data/FracAtlas/images_vlm_clean/IMG0002278.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:51:28.165779+00:00,openai,gpt-4o-mini,sensitive,IMG0001259.jpg,data/FracAtlas/images_vlm_clean/IMG0001259.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:51:30.565659+00:00,openai,gpt-4o-mini,sensitive,IMG0001935.jpg,data/FracAtlas/images_vlm_clean/IMG0001935.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:51:33.389275+00:00,openai,gpt-4o-mini,sensitive,IMG0003627.jpg,data/FracAtlas/images_vlm_clean/IMG0003627.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:51:35.997494+00:00,openai,gpt-4o-mini,sensitive,IMG0003399.jpg,data/FracAtlas/images_vlm_clean/IMG0003399.jpg,1,0,0.1,0,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:51:38.632936+00:00,openai,gpt-4o-mini,sensitive,IMG0001024.jpg,data/FracAtlas/images_vlm_clean/IMG0001024.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:51:41.289586+00:00,openai,gpt-4o-mini,sensitive,IMG0002008.jpg,data/FracAtlas/images_vlm_clean/IMG0002008.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:51:44.501635+00:00,openai,gpt-4o-mini,sensitive,IMG0002611.jpg,data/FracAtlas/images_vlm_clean/IMG0002611.jpg,1,1,0.85,1,There is visible evidence of a fracture in the bone structure.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone structure.""
+}",
+2026-05-15T02:51:47.755123+00:00,openai,gpt-4o-mini,sensitive,IMG0000203.jpg,data/FracAtlas/images_vlm_clean/IMG0000203.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:51:50.670392+00:00,openai,gpt-4o-mini,sensitive,IMG0000478.jpg,data/FracAtlas/images_vlm_clean/IMG0000478.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:51:53.310658+00:00,openai,gpt-4o-mini,sensitive,IMG0001904.jpg,data/FracAtlas/images_vlm_clean/IMG0001904.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:51:56.199883+00:00,openai,gpt-4o-mini,sensitive,IMG0001084.jpg,data/FracAtlas/images_vlm_clean/IMG0001084.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:51:59.384518+00:00,openai,gpt-4o-mini,sensitive,IMG0000556.jpg,data/FracAtlas/images_vlm_clean/IMG0000556.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:52:02.960669+00:00,openai,gpt-4o-mini,sensitive,IMG0000085.jpg,data/FracAtlas/images_vlm_clean/IMG0000085.jpg,0,1,0.85,0,There is visible evidence of a fracture in the bone structure.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone structure.""
+}",
+2026-05-15T02:52:06.840306+00:00,openai,gpt-4o-mini,sensitive,IMG0000406.jpg,data/FracAtlas/images_vlm_clean/IMG0000406.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:52:09.149090+00:00,openai,gpt-4o-mini,sensitive,IMG0003491.jpg,data/FracAtlas/images_vlm_clean/IMG0003491.jpg,0,1,0.85,0,There is visible evidence of a fracture in the bone.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone.""
+}",
+2026-05-15T02:52:12.061681+00:00,openai,gpt-4o-mini,sensitive,IMG0000618.jpg,data/FracAtlas/images_vlm_clean/IMG0000618.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:52:14.529798+00:00,openai,gpt-4o-mini,sensitive,IMG0003145.jpg,data/FracAtlas/images_vlm_clean/IMG0003145.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:52:17.192102+00:00,openai,gpt-4o-mini,sensitive,IMG0003415.jpg,data/FracAtlas/images_vlm_clean/IMG0003415.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:52:19.920458+00:00,openai,gpt-4o-mini,sensitive,IMG0000820.jpg,data/FracAtlas/images_vlm_clean/IMG0000820.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:52:22.462323+00:00,openai,gpt-4o-mini,sensitive,IMG0003612.jpg,data/FracAtlas/images_vlm_clean/IMG0003612.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:52:24.850125+00:00,openai,gpt-4o-mini,sensitive,IMG0002542.jpg,data/FracAtlas/images_vlm_clean/IMG0002542.jpg,1,0,0.1,0,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:52:27.394525+00:00,openai,gpt-4o-mini,sensitive,IMG0003614.jpg,data/FracAtlas/images_vlm_clean/IMG0003614.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:52:30.294793+00:00,openai,gpt-4o-mini,sensitive,IMG0001482.jpg,data/FracAtlas/images_vlm_clean/IMG0001482.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:52:33.021195+00:00,openai,gpt-4o-mini,sensitive,IMG0002921.jpg,data/FracAtlas/images_vlm_clean/IMG0002921.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:52:35.987682+00:00,openai,gpt-4o-mini,sensitive,IMG0002010.jpg,data/FracAtlas/images_vlm_clean/IMG0002010.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:52:39.177884+00:00,openai,gpt-4o-mini,sensitive,IMG0003924.jpg,data/FracAtlas/images_vlm_clean/IMG0003924.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:52:41.627402+00:00,openai,gpt-4o-mini,sensitive,IMG0003812.jpg,data/FracAtlas/images_vlm_clean/IMG0003812.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:52:45.009917+00:00,openai,gpt-4o-mini,sensitive,IMG0000042.jpg,data/FracAtlas/images_vlm_clean/IMG0000042.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:52:48.151670+00:00,openai,gpt-4o-mini,sensitive,IMG0002786.jpg,data/FracAtlas/images_vlm_clean/IMG0002786.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:52:51.050715+00:00,openai,gpt-4o-mini,sensitive,IMG0003206.jpg,data/FracAtlas/images_vlm_clean/IMG0003206.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:52:53.577054+00:00,openai,gpt-4o-mini,sensitive,IMG0000005.jpg,data/FracAtlas/images_vlm_clean/IMG0000005.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:52:56.435552+00:00,openai,gpt-4o-mini,sensitive,IMG0000715.jpg,data/FracAtlas/images_vlm_clean/IMG0000715.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:53:00.406190+00:00,openai,gpt-4o-mini,sensitive,IMG0001695.jpg,data/FracAtlas/images_vlm_clean/IMG0001695.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:53:02.729588+00:00,openai,gpt-4o-mini,sensitive,IMG0002727.jpg,data/FracAtlas/images_vlm_clean/IMG0002727.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:53:05.613891+00:00,openai,gpt-4o-mini,sensitive,IMG0002661.jpg,data/FracAtlas/images_vlm_clean/IMG0002661.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:53:08.496328+00:00,openai,gpt-4o-mini,sensitive,IMG0003265.jpg,data/FracAtlas/images_vlm_clean/IMG0003265.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:53:11.116165+00:00,openai,gpt-4o-mini,sensitive,IMG0000897.jpg,data/FracAtlas/images_vlm_clean/IMG0000897.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:53:14.261882+00:00,openai,gpt-4o-mini,sensitive,IMG0001340.jpg,data/FracAtlas/images_vlm_clean/IMG0001340.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:53:16.902333+00:00,openai,gpt-4o-mini,sensitive,IMG0001781.jpg,data/FracAtlas/images_vlm_clean/IMG0001781.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:53:19.516664+00:00,openai,gpt-4o-mini,sensitive,IMG0000045.jpg,data/FracAtlas/images_vlm_clean/IMG0000045.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:53:22.296858+00:00,openai,gpt-4o-mini,sensitive,IMG0002023.jpg,data/FracAtlas/images_vlm_clean/IMG0002023.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:53:24.874646+00:00,openai,gpt-4o-mini,sensitive,IMG0003536.jpg,data/FracAtlas/images_vlm_clean/IMG0003536.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:53:27.584729+00:00,openai,gpt-4o-mini,sensitive,IMG0002909.jpg,data/FracAtlas/images_vlm_clean/IMG0002909.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:53:31.038070+00:00,openai,gpt-4o-mini,sensitive,IMG0003606.jpg,data/FracAtlas/images_vlm_clean/IMG0003606.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:53:33.774915+00:00,openai,gpt-4o-mini,sensitive,IMG0001698.jpg,data/FracAtlas/images_vlm_clean/IMG0001698.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:53:36.633216+00:00,openai,gpt-4o-mini,sensitive,IMG0002053.jpg,data/FracAtlas/images_vlm_clean/IMG0002053.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:53:39.146791+00:00,openai,gpt-4o-mini,sensitive,IMG0001106.jpg,data/FracAtlas/images_vlm_clean/IMG0001106.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:53:42.130549+00:00,openai,gpt-4o-mini,sensitive,IMG0003804.jpg,data/FracAtlas/images_vlm_clean/IMG0003804.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:53:45.798792+00:00,openai,gpt-4o-mini,sensitive,IMG0003811.jpg,data/FracAtlas/images_vlm_clean/IMG0003811.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:53:48.754437+00:00,openai,gpt-4o-mini,sensitive,IMG0001642.jpg,data/FracAtlas/images_vlm_clean/IMG0001642.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:53:51.167673+00:00,openai,gpt-4o-mini,sensitive,IMG0002562.jpg,data/FracAtlas/images_vlm_clean/IMG0002562.jpg,1,1,0.85,1,There are visible signs of a fracture in the image.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There are visible signs of a fracture in the image.""
+}",
+2026-05-15T02:53:53.850767+00:00,openai,gpt-4o-mini,sensitive,IMG0003364.jpg,data/FracAtlas/images_vlm_clean/IMG0003364.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:53:56.729135+00:00,openai,gpt-4o-mini,sensitive,IMG0001638.jpg,data/FracAtlas/images_vlm_clean/IMG0001638.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:53:59.645281+00:00,openai,gpt-4o-mini,sensitive,IMG0000208.jpg,data/FracAtlas/images_vlm_clean/IMG0000208.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:54:02.378024+00:00,openai,gpt-4o-mini,sensitive,IMG0002898.jpg,data/FracAtlas/images_vlm_clean/IMG0002898.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:54:05.489320+00:00,openai,gpt-4o-mini,sensitive,IMG0002911.jpg,data/FracAtlas/images_vlm_clean/IMG0002911.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:54:08.138833+00:00,openai,gpt-4o-mini,sensitive,IMG0003626.jpg,data/FracAtlas/images_vlm_clean/IMG0003626.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:54:26.293735+00:00,openai,gpt-4o-mini,sensitive,IMG0001477.jpg,data/FracAtlas/images_vlm_clean/IMG0001477.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:54:29.405493+00:00,openai,gpt-4o-mini,sensitive,IMG0000431.jpg,data/FracAtlas/images_vlm_clean/IMG0000431.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:54:32.516017+00:00,openai,gpt-4o-mini,sensitive,IMG0000118.jpg,data/FracAtlas/images_vlm_clean/IMG0000118.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:54:35.375751+00:00,openai,gpt-4o-mini,sensitive,IMG0000074.jpg,data/FracAtlas/images_vlm_clean/IMG0000074.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:54:38.261950+00:00,openai,gpt-4o-mini,sensitive,IMG0003568.jpg,data/FracAtlas/images_vlm_clean/IMG0003568.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:54:40.819785+00:00,openai,gpt-4o-mini,sensitive,IMG0002501.jpg,data/FracAtlas/images_vlm_clean/IMG0002501.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:54:43.441332+00:00,openai,gpt-4o-mini,sensitive,IMG0003503.jpg,data/FracAtlas/images_vlm_clean/IMG0003503.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:54:45.811608+00:00,openai,gpt-4o-mini,sensitive,IMG0003538.jpg,data/FracAtlas/images_vlm_clean/IMG0003538.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:54:48.331113+00:00,openai,gpt-4o-mini,sensitive,IMG0002655.jpg,data/FracAtlas/images_vlm_clean/IMG0002655.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:54:51.007352+00:00,openai,gpt-4o-mini,sensitive,IMG0001764.jpg,data/FracAtlas/images_vlm_clean/IMG0001764.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:54:53.460772+00:00,openai,gpt-4o-mini,sensitive,IMG0003387.jpg,data/FracAtlas/images_vlm_clean/IMG0003387.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:54:56.252153+00:00,openai,gpt-4o-mini,sensitive,IMG0001770.jpg,data/FracAtlas/images_vlm_clean/IMG0001770.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:54:58.625547+00:00,openai,gpt-4o-mini,sensitive,IMG0000276.jpg,data/FracAtlas/images_vlm_clean/IMG0000276.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:55:01.129168+00:00,openai,gpt-4o-mini,sensitive,IMG0000940.jpg,data/FracAtlas/images_vlm_clean/IMG0000940.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:55:03.738810+00:00,openai,gpt-4o-mini,sensitive,IMG0003307.jpg,data/FracAtlas/images_vlm_clean/IMG0003307.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:55:06.502172+00:00,openai,gpt-4o-mini,sensitive,IMG0003675.jpg,data/FracAtlas/images_vlm_clean/IMG0003675.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:55:09.393149+00:00,openai,gpt-4o-mini,sensitive,IMG0001032.jpg,data/FracAtlas/images_vlm_clean/IMG0001032.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:55:11.989409+00:00,openai,gpt-4o-mini,sensitive,IMG0003715.jpg,data/FracAtlas/images_vlm_clean/IMG0003715.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:55:14.707040+00:00,openai,gpt-4o-mini,sensitive,IMG0002698.jpg,data/FracAtlas/images_vlm_clean/IMG0002698.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:55:18.366559+00:00,openai,gpt-4o-mini,sensitive,IMG0001721.jpg,data/FracAtlas/images_vlm_clean/IMG0001721.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:55:21.140056+00:00,openai,gpt-4o-mini,sensitive,IMG0001240.jpg,data/FracAtlas/images_vlm_clean/IMG0001240.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:55:25.751957+00:00,openai,gpt-4o-mini,sensitive,IMG0001297.jpg,data/FracAtlas/images_vlm_clean/IMG0001297.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:55:29.208413+00:00,openai,gpt-4o-mini,sensitive,IMG0000770.jpg,data/FracAtlas/images_vlm_clean/IMG0000770.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:55:31.625213+00:00,openai,gpt-4o-mini,sensitive,IMG0002251.jpg,data/FracAtlas/images_vlm_clean/IMG0002251.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:55:33.970116+00:00,openai,gpt-4o-mini,sensitive,IMG0001602.jpg,data/FracAtlas/images_vlm_clean/IMG0001602.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:55:36.389087+00:00,openai,gpt-4o-mini,sensitive,IMG0003389.jpg,data/FracAtlas/images_vlm_clean/IMG0003389.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:55:39.495590+00:00,openai,gpt-4o-mini,sensitive,IMG0004279.jpg,data/FracAtlas/images_vlm_clean/IMG0004279.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:55:42.276411+00:00,openai,gpt-4o-mini,sensitive,IMG0002770.jpg,data/FracAtlas/images_vlm_clean/IMG0002770.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:55:44.426726+00:00,openai,gpt-4o-mini,sensitive,IMG0002498.jpg,data/FracAtlas/images_vlm_clean/IMG0002498.jpg,1,0,0.1,0,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:55:47.876259+00:00,openai,gpt-4o-mini,sensitive,IMG0002551.jpg,data/FracAtlas/images_vlm_clean/IMG0002551.jpg,1,0,0.1,0,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:55:50.222777+00:00,openai,gpt-4o-mini,sensitive,IMG0000266.jpg,data/FracAtlas/images_vlm_clean/IMG0000266.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:55:53.540009+00:00,openai,gpt-4o-mini,sensitive,IMG0000103.jpg,data/FracAtlas/images_vlm_clean/IMG0000103.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:55:56.350106+00:00,openai,gpt-4o-mini,sensitive,IMG0001798.jpg,data/FracAtlas/images_vlm_clean/IMG0001798.jpg,0,0,0.1,1,"Image quality is poor, making fracture detection difficult.","{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""Image quality is poor, making fracture detection difficult.""
+}",
+2026-05-15T02:55:58.770520+00:00,openai,gpt-4o-mini,sensitive,IMG0000133.jpg,data/FracAtlas/images_vlm_clean/IMG0000133.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:56:01.651401+00:00,openai,gpt-4o-mini,sensitive,IMG0000261.jpg,data/FracAtlas/images_vlm_clean/IMG0000261.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:56:05.422670+00:00,openai,gpt-4o-mini,sensitive,IMG0001576.jpg,data/FracAtlas/images_vlm_clean/IMG0001576.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:56:08.204301+00:00,openai,gpt-4o-mini,sensitive,IMG0003793.jpg,data/FracAtlas/images_vlm_clean/IMG0003793.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:56:12.324226+00:00,openai,gpt-4o-mini,sensitive,IMG0004334.jpg,data/FracAtlas/images_vlm_clean/IMG0004334.jpg,1,1,0.85,1,There are visible signs suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There are visible signs suggesting a fracture.""
+}",
+2026-05-15T02:56:15.046282+00:00,openai,gpt-4o-mini,sensitive,IMG0001551.jpg,data/FracAtlas/images_vlm_clean/IMG0001551.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:56:17.599238+00:00,openai,gpt-4o-mini,sensitive,IMG0003986.jpg,data/FracAtlas/images_vlm_clean/IMG0003986.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:56:20.164039+00:00,openai,gpt-4o-mini,sensitive,IMG0001249.jpg,data/FracAtlas/images_vlm_clean/IMG0001249.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:56:23.078698+00:00,openai,gpt-4o-mini,sensitive,IMG0002938.jpg,data/FracAtlas/images_vlm_clean/IMG0002938.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:56:25.427445+00:00,openai,gpt-4o-mini,sensitive,IMG0001331.jpg,data/FracAtlas/images_vlm_clean/IMG0001331.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:56:28.089086+00:00,openai,gpt-4o-mini,sensitive,IMG0003267.jpg,data/FracAtlas/images_vlm_clean/IMG0003267.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:56:30.868346+00:00,openai,gpt-4o-mini,sensitive,IMG0002156.jpg,data/FracAtlas/images_vlm_clean/IMG0002156.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:56:33.536051+00:00,openai,gpt-4o-mini,sensitive,IMG0002389.jpg,data/FracAtlas/images_vlm_clean/IMG0002389.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:56:37.159788+00:00,openai,gpt-4o-mini,sensitive,IMG0002591.jpg,data/FracAtlas/images_vlm_clean/IMG0002591.jpg,1,0,0.1,0,No visible fractures detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible fractures detected.""
+}",
+2026-05-15T02:56:40.671415+00:00,openai,gpt-4o-mini,sensitive,IMG0000697.jpg,data/FracAtlas/images_vlm_clean/IMG0000697.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:56:43.452838+00:00,openai,gpt-4o-mini,sensitive,IMG0001763.jpg,data/FracAtlas/images_vlm_clean/IMG0001763.jpg,1,0,0.1,0,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:57:18.684838+00:00,openai,gpt-4o-mini,sensitive,IMG0002557.jpg,data/FracAtlas/images_vlm_clean/IMG0002557.jpg,1,1,0.85,1,There is visible evidence of a fracture in the bone.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone.""
+}",
+2026-05-15T02:57:21.773923+00:00,openai,gpt-4o-mini,sensitive,IMG0002664.jpg,data/FracAtlas/images_vlm_clean/IMG0002664.jpg,1,0,0.1,0,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:57:24.614303+00:00,openai,gpt-4o-mini,sensitive,IMG0002850.jpg,data/FracAtlas/images_vlm_clean/IMG0002850.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:57:27.204897+00:00,openai,gpt-4o-mini,sensitive,IMG0001494.jpg,data/FracAtlas/images_vlm_clean/IMG0001494.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:57:30.417412+00:00,openai,gpt-4o-mini,sensitive,IMG0003001.jpg,data/FracAtlas/images_vlm_clean/IMG0003001.jpg,1,1,0.75,1,There is plausible visual evidence of a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""There is plausible visual evidence of a fracture.""
+}",
+2026-05-15T02:57:33.257591+00:00,openai,gpt-4o-mini,sensitive,IMG0001334.jpg,data/FracAtlas/images_vlm_clean/IMG0001334.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:57:36.098142+00:00,openai,gpt-4o-mini,sensitive,IMG0003891.jpg,data/FracAtlas/images_vlm_clean/IMG0003891.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:57:39.333756+00:00,openai,gpt-4o-mini,sensitive,IMG0000207.jpg,data/FracAtlas/images_vlm_clean/IMG0000207.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:57:41.525374+00:00,openai,gpt-4o-mini,sensitive,IMG0000989.jpg,data/FracAtlas/images_vlm_clean/IMG0000989.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:57:44.646238+00:00,openai,gpt-4o-mini,sensitive,IMG0000251.jpg,data/FracAtlas/images_vlm_clean/IMG0000251.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:57:48.484502+00:00,openai,gpt-4o-mini,sensitive,IMG0003323.jpg,data/FracAtlas/images_vlm_clean/IMG0003323.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:57:51.276671+00:00,openai,gpt-4o-mini,sensitive,IMG0003440.jpg,data/FracAtlas/images_vlm_clean/IMG0003440.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:57:53.525678+00:00,openai,gpt-4o-mini,sensitive,IMG0004160.jpg,data/FracAtlas/images_vlm_clean/IMG0004160.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:57:57.171433+00:00,openai,gpt-4o-mini,sensitive,IMG0000757.jpg,data/FracAtlas/images_vlm_clean/IMG0000757.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:57:59.856970+00:00,openai,gpt-4o-mini,sensitive,IMG0003768.jpg,data/FracAtlas/images_vlm_clean/IMG0003768.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:58:03.145351+00:00,openai,gpt-4o-mini,sensitive,IMG0001464.jpg,data/FracAtlas/images_vlm_clean/IMG0001464.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:58:05.983492+00:00,openai,gpt-4o-mini,sensitive,IMG0003081.jpg,data/FracAtlas/images_vlm_clean/IMG0003081.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:58:10.007147+00:00,openai,gpt-4o-mini,sensitive,IMG0003805.jpg,data/FracAtlas/images_vlm_clean/IMG0003805.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:58:19.522511+00:00,openai,gpt-4o-mini,sensitive,IMG0001648.jpg,data/FracAtlas/images_vlm_clean/IMG0001648.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:58:22.016447+00:00,openai,gpt-4o-mini,sensitive,IMG0001253.jpg,data/FracAtlas/images_vlm_clean/IMG0001253.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:58:26.289346+00:00,openai,gpt-4o-mini,sensitive,IMG0003900.jpg,data/FracAtlas/images_vlm_clean/IMG0003900.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:58:29.527943+00:00,openai,gpt-4o-mini,sensitive,IMG0002949.jpg,data/FracAtlas/images_vlm_clean/IMG0002949.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:58:32.323701+00:00,openai,gpt-4o-mini,sensitive,IMG0001222.jpg,data/FracAtlas/images_vlm_clean/IMG0001222.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:58:35.186466+00:00,openai,gpt-4o-mini,sensitive,IMG0002691.jpg,data/FracAtlas/images_vlm_clean/IMG0002691.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:58:38.533048+00:00,openai,gpt-4o-mini,sensitive,IMG0002621.jpg,data/FracAtlas/images_vlm_clean/IMG0002621.jpg,1,0,0.1,0,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:58:41.539297+00:00,openai,gpt-4o-mini,sensitive,IMG0001374.jpg,data/FracAtlas/images_vlm_clean/IMG0001374.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:58:44.358331+00:00,openai,gpt-4o-mini,sensitive,IMG0000281.jpg,data/FracAtlas/images_vlm_clean/IMG0000281.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:58:47.853149+00:00,openai,gpt-4o-mini,sensitive,IMG0002839.jpg,data/FracAtlas/images_vlm_clean/IMG0002839.jpg,0,1,0.85,0,There are visible signs suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There are visible signs suggesting a fracture.""
+}",
+2026-05-15T02:58:50.063613+00:00,openai,gpt-4o-mini,sensitive,IMG0002815.jpg,data/FracAtlas/images_vlm_clean/IMG0002815.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T02:58:53.180970+00:00,openai,gpt-4o-mini,sensitive,IMG0000675.jpg,data/FracAtlas/images_vlm_clean/IMG0000675.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:58:56.204913+00:00,openai,gpt-4o-mini,sensitive,IMG0002748.jpg,data/FracAtlas/images_vlm_clean/IMG0002748.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:58:58.872133+00:00,openai,gpt-4o-mini,sensitive,IMG0001027.jpg,data/FracAtlas/images_vlm_clean/IMG0001027.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:01.764035+00:00,openai,gpt-4o-mini,sensitive,IMG0001201.jpg,data/FracAtlas/images_vlm_clean/IMG0001201.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:05.712731+00:00,openai,gpt-4o-mini,sensitive,IMG0002290.jpg,data/FracAtlas/images_vlm_clean/IMG0002290.jpg,0,1,0.85,0,There are visible signs suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There are visible signs suggesting a fracture.""
+}",
+2026-05-15T02:59:08.429266+00:00,openai,gpt-4o-mini,sensitive,IMG0001410.jpg,data/FracAtlas/images_vlm_clean/IMG0001410.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:10.864035+00:00,openai,gpt-4o-mini,sensitive,IMG0000725.jpg,data/FracAtlas/images_vlm_clean/IMG0000725.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:59:13.170967+00:00,openai,gpt-4o-mini,sensitive,IMG0002797.jpg,data/FracAtlas/images_vlm_clean/IMG0002797.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:59:15.870164+00:00,openai,gpt-4o-mini,sensitive,IMG0000448.jpg,data/FracAtlas/images_vlm_clean/IMG0000448.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:18.418446+00:00,openai,gpt-4o-mini,sensitive,IMG0001927.jpg,data/FracAtlas/images_vlm_clean/IMG0001927.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:21.291014+00:00,openai,gpt-4o-mini,sensitive,IMG0001160.jpg,data/FracAtlas/images_vlm_clean/IMG0001160.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:24.757870+00:00,openai,gpt-4o-mini,sensitive,IMG0000357.jpg,data/FracAtlas/images_vlm_clean/IMG0000357.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:28.249817+00:00,openai,gpt-4o-mini,sensitive,IMG0000919.jpg,data/FracAtlas/images_vlm_clean/IMG0000919.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:30.888515+00:00,openai,gpt-4o-mini,sensitive,IMG0003090.jpg,data/FracAtlas/images_vlm_clean/IMG0003090.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:33.227744+00:00,openai,gpt-4o-mini,sensitive,IMG0003752.jpg,data/FracAtlas/images_vlm_clean/IMG0003752.jpg,0,1,0.75,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T02:59:36.178501+00:00,openai,gpt-4o-mini,sensitive,IMG0002754.jpg,data/FracAtlas/images_vlm_clean/IMG0002754.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:39.203734+00:00,openai,gpt-4o-mini,sensitive,IMG0000466.jpg,data/FracAtlas/images_vlm_clean/IMG0000466.jpg,1,1,0.85,1,There is visible evidence of a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture.""
+}",
+2026-05-15T02:59:47.194664+00:00,openai,gpt-4o-mini,sensitive,IMG0000586.jpg,data/FracAtlas/images_vlm_clean/IMG0000586.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:49.355284+00:00,openai,gpt-4o-mini,sensitive,IMG0003286.jpg,data/FracAtlas/images_vlm_clean/IMG0003286.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T02:59:52.048341+00:00,openai,gpt-4o-mini,sensitive,IMG0003519.jpg,data/FracAtlas/images_vlm_clean/IMG0003519.jpg,1,0,0.1,0,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T02:59:55.195998+00:00,openai,gpt-4o-mini,sensitive,IMG0000212.jpg,data/FracAtlas/images_vlm_clean/IMG0000212.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T02:59:57.974359+00:00,openai,gpt-4o-mini,sensitive,IMG0001528.jpg,data/FracAtlas/images_vlm_clean/IMG0001528.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T03:00:00.663453+00:00,openai,gpt-4o-mini,sensitive,IMG0003234.jpg,data/FracAtlas/images_vlm_clean/IMG0003234.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T03:00:03.376771+00:00,openai,gpt-4o-mini,sensitive,IMG0002645.jpg,data/FracAtlas/images_vlm_clean/IMG0002645.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T03:00:06.350892+00:00,openai,gpt-4o-mini,sensitive,IMG0001818.jpg,data/FracAtlas/images_vlm_clean/IMG0001818.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:00:08.971773+00:00,openai,gpt-4o-mini,sensitive,IMG0000862.jpg,data/FracAtlas/images_vlm_clean/IMG0000862.jpg,0,1,0.85,0,There is visible evidence of a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture.""
+}",
+2026-05-15T03:00:14.025273+00:00,openai,gpt-4o-mini,sensitive,IMG0003582.jpg,data/FracAtlas/images_vlm_clean/IMG0003582.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T03:00:16.312769+00:00,openai,gpt-4o-mini,sensitive,IMG0002550.jpg,data/FracAtlas/images_vlm_clean/IMG0002550.jpg,1,0,0.1,0,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T03:00:19.096577+00:00,openai,gpt-4o-mini,sensitive,IMG0000629.jpg,data/FracAtlas/images_vlm_clean/IMG0000629.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:00:21.915688+00:00,openai,gpt-4o-mini,sensitive,IMG0003496.jpg,data/FracAtlas/images_vlm_clean/IMG0003496.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:00:24.582127+00:00,openai,gpt-4o-mini,sensitive,IMG0000723.jpg,data/FracAtlas/images_vlm_clean/IMG0000723.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:00:27.913475+00:00,openai,gpt-4o-mini,sensitive,IMG0002582.jpg,data/FracAtlas/images_vlm_clean/IMG0002582.jpg,1,1,0.85,1,Visible signs of a fracture are present.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""Visible signs of a fracture are present.""
+}",
+2026-05-15T03:00:30.139051+00:00,openai,gpt-4o-mini,sensitive,IMG0002058.jpg,data/FracAtlas/images_vlm_clean/IMG0002058.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:00:32.991612+00:00,openai,gpt-4o-mini,sensitive,IMG0000307.jpg,data/FracAtlas/images_vlm_clean/IMG0000307.jpg,1,0,0.1,0,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:00:35.940480+00:00,openai,gpt-4o-mini,sensitive,IMG0000718.jpg,data/FracAtlas/images_vlm_clean/IMG0000718.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T03:00:38.858539+00:00,openai,gpt-4o-mini,sensitive,IMG0000316.jpg,data/FracAtlas/images_vlm_clean/IMG0000316.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:00:42.031134+00:00,openai,gpt-4o-mini,sensitive,IMG0001017.jpg,data/FracAtlas/images_vlm_clean/IMG0001017.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:00:44.978489+00:00,openai,gpt-4o-mini,sensitive,IMG0000491.jpg,data/FracAtlas/images_vlm_clean/IMG0000491.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T03:00:48.819410+00:00,openai,gpt-4o-mini,sensitive,IMG0003823.jpg,data/FracAtlas/images_vlm_clean/IMG0003823.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:00:51.582685+00:00,openai,gpt-4o-mini,sensitive,IMG0001395.jpg,data/FracAtlas/images_vlm_clean/IMG0001395.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:00:54.601296+00:00,openai,gpt-4o-mini,sensitive,IMG0001761.jpg,data/FracAtlas/images_vlm_clean/IMG0001761.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T03:00:58.255429+00:00,openai,gpt-4o-mini,sensitive,IMG0000644.jpg,data/FracAtlas/images_vlm_clean/IMG0000644.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T03:01:02.312684+00:00,openai,gpt-4o-mini,sensitive,IMG0002573.jpg,data/FracAtlas/images_vlm_clean/IMG0002573.jpg,1,1,0.85,1,There are visible signs of a fracture in the bone structure.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There are visible signs of a fracture in the bone structure.""
+}",
+2026-05-15T03:01:04.889480+00:00,openai,gpt-4o-mini,sensitive,IMG0001400.jpg,data/FracAtlas/images_vlm_clean/IMG0001400.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:01:08.742915+00:00,openai,gpt-4o-mini,sensitive,IMG0003480.jpg,data/FracAtlas/images_vlm_clean/IMG0003480.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T03:01:13.987202+00:00,openai,gpt-4o-mini,sensitive,IMG0004284.jpg,data/FracAtlas/images_vlm_clean/IMG0004284.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:01:17.237849+00:00,openai,gpt-4o-mini,sensitive,IMG0003255.jpg,data/FracAtlas/images_vlm_clean/IMG0003255.jpg,1,1,0.85,1,There is visible evidence of a fracture in the bone.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the bone.""
+}",
+2026-05-15T03:01:20.690798+00:00,openai,gpt-4o-mini,sensitive,IMG0001756.jpg,data/FracAtlas/images_vlm_clean/IMG0001756.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:01:23.200503+00:00,openai,gpt-4o-mini,sensitive,IMG0002704.jpg,data/FracAtlas/images_vlm_clean/IMG0002704.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:01:25.886292+00:00,openai,gpt-4o-mini,sensitive,IMG0003701.jpg,data/FracAtlas/images_vlm_clean/IMG0003701.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:01:28.364176+00:00,openai,gpt-4o-mini,sensitive,IMG0003135.jpg,data/FracAtlas/images_vlm_clean/IMG0003135.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T03:01:30.761892+00:00,openai,gpt-4o-mini,sensitive,IMG0003524.jpg,data/FracAtlas/images_vlm_clean/IMG0003524.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:01:33.723941+00:00,openai,gpt-4o-mini,sensitive,IMG0001697.jpg,data/FracAtlas/images_vlm_clean/IMG0001697.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:01:36.537370+00:00,openai,gpt-4o-mini,sensitive,IMG0003337.jpg,data/FracAtlas/images_vlm_clean/IMG0003337.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:01:39.486722+00:00,openai,gpt-4o-mini,sensitive,IMG0003983.jpg,data/FracAtlas/images_vlm_clean/IMG0003983.jpg,0,1,0.85,0,There is visible evidence of a fracture in the image.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence of a fracture in the image.""
+}",
+2026-05-15T03:01:42.314942+00:00,openai,gpt-4o-mini,sensitive,IMG0002662.jpg,data/FracAtlas/images_vlm_clean/IMG0002662.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:01:44.947188+00:00,openai,gpt-4o-mini,sensitive,IMG0000799.jpg,data/FracAtlas/images_vlm_clean/IMG0000799.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:01:47.540014+00:00,openai,gpt-4o-mini,sensitive,IMG0003849.jpg,data/FracAtlas/images_vlm_clean/IMG0003849.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:01:50.159634+00:00,openai,gpt-4o-mini,sensitive,IMG0003306.jpg,data/FracAtlas/images_vlm_clean/IMG0003306.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:01:53.370254+00:00,openai,gpt-4o-mini,sensitive,IMG0000534.jpg,data/FracAtlas/images_vlm_clean/IMG0000534.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:01:56.549524+00:00,openai,gpt-4o-mini,sensitive,IMG0002683.jpg,data/FracAtlas/images_vlm_clean/IMG0002683.jpg,0,0,0.1,1,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T03:01:59.596561+00:00,openai,gpt-4o-mini,sensitive,IMG0002175.jpg,data/FracAtlas/images_vlm_clean/IMG0002175.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T03:02:02.742318+00:00,openai,gpt-4o-mini,sensitive,IMG0001993.jpg,data/FracAtlas/images_vlm_clean/IMG0001993.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:02:07.496600+00:00,openai,gpt-4o-mini,sensitive,IMG0001173.jpg,data/FracAtlas/images_vlm_clean/IMG0001173.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T03:02:10.083903+00:00,openai,gpt-4o-mini,sensitive,IMG0002420.jpg,data/FracAtlas/images_vlm_clean/IMG0002420.jpg,1,0,0.1,0,No visible evidence of fracture.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture.""
+}",
+2026-05-15T03:02:12.702836+00:00,openai,gpt-4o-mini,sensitive,IMG0003673.jpg,data/FracAtlas/images_vlm_clean/IMG0003673.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:02:16.226092+00:00,openai,gpt-4o-mini,sensitive,IMG0003056.jpg,data/FracAtlas/images_vlm_clean/IMG0003056.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:02:19.548132+00:00,openai,gpt-4o-mini,sensitive,IMG0000950.jpg,data/FracAtlas/images_vlm_clean/IMG0000950.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:02:22.991107+00:00,openai,gpt-4o-mini,sensitive,IMG0004118.jpg,data/FracAtlas/images_vlm_clean/IMG0004118.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:02:26.241377+00:00,openai,gpt-4o-mini,sensitive,IMG0001948.jpg,data/FracAtlas/images_vlm_clean/IMG0001948.jpg,1,1,0.75,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.75,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T03:02:29.234598+00:00,openai,gpt-4o-mini,sensitive,IMG0001409.jpg,data/FracAtlas/images_vlm_clean/IMG0001409.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:02:32.963812+00:00,openai,gpt-4o-mini,sensitive,IMG0003722.jpg,data/FracAtlas/images_vlm_clean/IMG0003722.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:02:35.628259+00:00,openai,gpt-4o-mini,sensitive,IMG0001654.jpg,data/FracAtlas/images_vlm_clean/IMG0001654.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:02:38.523740+00:00,openai,gpt-4o-mini,sensitive,IMG0000243.jpg,data/FracAtlas/images_vlm_clean/IMG0000243.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:02:41.061726+00:00,openai,gpt-4o-mini,sensitive,IMG0002945.jpg,data/FracAtlas/images_vlm_clean/IMG0002945.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:02:43.745656+00:00,openai,gpt-4o-mini,sensitive,IMG0002617.jpg,data/FracAtlas/images_vlm_clean/IMG0002617.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:02:46.945882+00:00,openai,gpt-4o-mini,sensitive,IMG0004286.jpg,data/FracAtlas/images_vlm_clean/IMG0004286.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:02:49.604181+00:00,openai,gpt-4o-mini,sensitive,IMG0000987.jpg,data/FracAtlas/images_vlm_clean/IMG0000987.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:02:52.150641+00:00,openai,gpt-4o-mini,sensitive,IMG0000242.jpg,data/FracAtlas/images_vlm_clean/IMG0000242.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:02:54.649584+00:00,openai,gpt-4o-mini,sensitive,IMG0002014.jpg,data/FracAtlas/images_vlm_clean/IMG0002014.jpg,0,1,0.85,0,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T03:02:57.360832+00:00,openai,gpt-4o-mini,sensitive,IMG0002361.jpg,data/FracAtlas/images_vlm_clean/IMG0002361.jpg,1,1,0.85,1,There is visible evidence suggesting a fracture.,"{
+  ""prediction"": 1,
+  ""fracture_probability"": 0.85,
+  ""short_reason"": ""There is visible evidence suggesting a fracture.""
+}",
+2026-05-15T03:03:01.262218+00:00,openai,gpt-4o-mini,sensitive,IMG0001475.jpg,data/FracAtlas/images_vlm_clean/IMG0001475.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:03:04.960573+00:00,openai,gpt-4o-mini,sensitive,IMG0001772.jpg,data/FracAtlas/images_vlm_clean/IMG0001772.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:03:07.281065+00:00,openai,gpt-4o-mini,sensitive,IMG0003790.jpg,data/FracAtlas/images_vlm_clean/IMG0003790.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T03:03:10.899146+00:00,openai,gpt-4o-mini,sensitive,IMG0003780.jpg,data/FracAtlas/images_vlm_clean/IMG0003780.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T03:03:14.387191+00:00,openai,gpt-4o-mini,sensitive,IMG0003375.jpg,data/FracAtlas/images_vlm_clean/IMG0003375.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:03:16.870108+00:00,openai,gpt-4o-mini,sensitive,IMG0003157.jpg,data/FracAtlas/images_vlm_clean/IMG0003157.jpg,1,0,0.1,0,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:03:19.829816+00:00,openai,gpt-4o-mini,sensitive,IMG0001456.jpg,data/FracAtlas/images_vlm_clean/IMG0001456.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T03:03:23.090498+00:00,openai,gpt-4o-mini,sensitive,IMG0001069.jpg,data/FracAtlas/images_vlm_clean/IMG0001069.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:03:26.716785+00:00,openai,gpt-4o-mini,sensitive,IMG0001822.jpg,data/FracAtlas/images_vlm_clean/IMG0001822.jpg,0,0,0.1,1,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:03:29.417766+00:00,openai,gpt-4o-mini,sensitive,IMG0001846.jpg,data/FracAtlas/images_vlm_clean/IMG0001846.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:03:34.493290+00:00,openai,gpt-4o-mini,sensitive,IMG0000053.jpg,data/FracAtlas/images_vlm_clean/IMG0000053.jpg,0,0,0.1,1,No visible signs of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible signs of fracture detected.""
+}",
+2026-05-15T03:03:37.211535+00:00,openai,gpt-4o-mini,sensitive,IMG0003619.jpg,data/FracAtlas/images_vlm_clean/IMG0003619.jpg,1,0,0.1,0,No visible evidence of fracture detected.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No visible evidence of fracture detected.""
+}",
+2026-05-15T03:03:40.474440+00:00,openai,gpt-4o-mini,sensitive,IMG0003471.jpg,data/FracAtlas/images_vlm_clean/IMG0003471.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
+2026-05-15T03:03:43.785322+00:00,openai,gpt-4o-mini,sensitive,IMG0001944.jpg,data/FracAtlas/images_vlm_clean/IMG0001944.jpg,0,0,0.1,1,No clear evidence of fracture observed.,"{
+  ""prediction"": 0,
+  ""fracture_probability"": 0.1,
+  ""short_reason"": ""No clear evidence of fracture observed.""
+}",
