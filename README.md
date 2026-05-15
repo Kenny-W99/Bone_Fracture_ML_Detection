@@ -4,6 +4,38 @@ A PyTorch-based machine learning project for binary bone fracture detection usin
 
 > **Important:** This project is for educational and research purposes only. It is **not** intended for clinical diagnosis or medical decision-making.
 
+## Latest Update: Journal-Strengthening Package
+
+This repository now includes a reproducible journal-strengthening experiment package under:
+
+```text
+experiments/journal_strengthening/
+```
+
+The package addresses several manuscript-review weaknesses by adding:
+
+- Validation-set decision-threshold tuning for CNN models
+- Bootstrap 95% confidence intervals for test-set metrics
+- Normalized validation/test prediction CSVs
+- ResNet50 error analysis and subgroup analysis
+- Paper-ready LaTeX tables and figures
+- Guarded scaffolds for multi-seed ResNet50 training, repeated VLM trials, and external validation
+
+The safe non-expensive analysis can be run with:
+
+```bash
+bash experiments/journal_strengthening/run_all_strengthening.sh
+```
+
+Expensive or paid experiments are opt-in only:
+
+```bash
+RUN_MULTISEED=1 bash experiments/journal_strengthening/run_all_strengthening.sh
+RUN_VLM=1 VLM_MODEL=gpt-4o-mini bash experiments/journal_strengthening/run_all_strengthening.sh
+```
+
+No API keys, private `.env` files, raw image folders, or newly generated model checkpoints are committed.
+
 ## Project Overview
 
 This project builds a complete machine learning pipeline for bone fracture classification from musculoskeletal X-ray images. The main goal is to study how well task-specific CNN models can detect fractures, and how their performance compares with a small pilot baseline using a general-purpose multimodal LLM / VLM.
@@ -20,6 +52,7 @@ The project includes:
 - Grad-CAM visualization for interpretability
 - Optional VLM baseline using image-input APIs such as OpenAI, Gemini, or Anthropic
 - Reproducibility utilities and saved experiment outputs
+- Journal-strengthening analyses for threshold tuning, confidence intervals, error analysis, and paper-ready tables/figures
 
 ## Motivation
 
@@ -101,6 +134,8 @@ probability >= 0.5 → fracture
 probability < 0.5  → no fracture
 ```
 
+For the journal-strengthening analyses, additional thresholds are selected using validation-set predictions only and then evaluated on the held-out test set. This avoids selecting thresholds on test data while making the sensitivity-specificity trade-off explicit.
+
 ## Model Architectures
 
 This project compares four CNN-based models and one optional VLM pilot baseline.
@@ -178,6 +213,18 @@ Bone_Fracture_ML_Detection/
 │   ├── results_summary.csv
 │   ├── results_summary_with_vlm.csv
 │   └── other training / evaluation outputs
+│
+├── experiments/
+│   └── journal_strengthening/
+│       ├── README.md
+│       ├── run_all_strengthening.sh
+│       ├── threshold_tuning.py
+│       ├── bootstrap_ci.py
+│       ├── error_analysis.py
+│       ├── results/
+│       ├── tables/
+│       ├── figures/
+│       └── JOURNAL_STRENGTHENING_REPORT.md
 │
 ├── research_context/
 ├── shared/
@@ -520,6 +567,40 @@ tail -n +2 outputs/vlm/openai_sensitive_available24_eval/test_metrics.csv >> out
 cat outputs/vlm/vlm_prompt_summary.csv
 ```
 
+### 7. Run Journal-Strengthening Analyses
+
+After CNN checkpoints and prediction CSVs are available, run:
+
+```bash
+bash experiments/journal_strengthening/run_all_strengthening.sh
+```
+
+This safe runner performs:
+
+1. Repository audit
+2. CNN validation/test prediction normalization or generation
+3. Validation-only threshold tuning
+4. Bootstrap 95% confidence intervals
+5. ResNet50 error and subgroup analysis
+6. Paper figure generation
+7. Final report generation
+
+Important guarded steps:
+
+- Multi-seed training is skipped unless `RUN_MULTISEED=1`.
+- Paid VLM repeated trials are skipped unless `RUN_VLM=1`.
+- External validation is skipped unless external data and validated labels are present.
+
+Main outputs:
+
+```text
+experiments/journal_strengthening/results/
+experiments/journal_strengthening/tables/
+experiments/journal_strengthening/figures/
+experiments/journal_strengthening/error_analysis/
+experiments/journal_strengthening/JOURNAL_STRENGTHENING_REPORT.md
+```
+
 ## Results
 
 ### CNN Test-Set Results
@@ -535,13 +616,50 @@ The following table summarizes the CNN results on the held-out test set.
 
 ### VLM Pilot Baseline Results
 
-The following VLM results were produced using `gpt-4o-mini` on the available-image pilot subset. This is a smaller pilot study, not a full replacement for the CNN test-set evaluation.
+The original VLM pilot used the available-image subset in the GitHub repository environment. A later full-test clean VLM pass is also included under `outputs/vlm/` for the 613-image held-out FracAtlas test split.
 
 | Model | Prompt | n | Accuracy | Precision | Recall | Specificity | F1-score | ROC-AUC | TP | FP | TN | FN |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | GPT-4o-mini | simple | 24 | 0.8750 | 0.6667 | 0.5000 | 0.9500 | 0.5714 | 0.6188 | 2 | 1 | 19 | 2 |
 | GPT-4o-mini | conservative | 24 | 0.8750 | 0.6667 | 0.5000 | 0.9500 | 0.5714 | 0.7250 | 2 | 1 | 19 | 2 |
 | GPT-4o-mini | sensitive | 24 | 0.6667 | 0.2500 | 0.5000 | 0.7000 | 0.3333 | 0.6000 | 2 | 6 | 14 | 2 |
+
+Full-test clean VLM results from `outputs/vlm/vlm_fulltest613_clean_summary.csv`:
+
+| Model | Prompt | n | Accuracy | Precision | Recall | Specificity | F1-score | ROC-AUC | TP | FP | TN | FN |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| GPT-4o-mini | simple | 613 | 0.8336 | 0.6250 | 0.1389 | 0.9822 | 0.2273 | 0.5702 | 15 | 9 | 496 | 93 |
+| GPT-4o-mini | conservative | 613 | 0.8320 | 0.6923 | 0.0833 | 0.9921 | 0.1488 | 0.5386 | 9 | 4 | 501 | 99 |
+| GPT-4o-mini | sensitive | 613 | 0.8059 | 0.4396 | 0.3704 | 0.8990 | 0.4020 | 0.6357 | 40 | 51 | 454 | 68 |
+
+### Journal-Strengthening Results
+
+Validation-only threshold tuning improved the ResNet50 operating point compared with the fixed `0.50` threshold.
+
+| ResNet50 Threshold Rule | Threshold | Accuracy | Precision | Recall | Specificity | F1-score | ROC-AUC | TP | FP | TN | FN |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Fixed 0.50 | 0.50 | 0.8581 | 0.5734 | 0.7593 | 0.8792 | 0.6534 | 0.8915 | 82 | 61 | 444 | 26 |
+| Max validation F1 | 0.57 | 0.8777 | 0.6320 | 0.7315 | 0.9089 | 0.6781 | 0.8915 | 79 | 46 | 459 | 29 |
+| Max Youden J | 0.54 | 0.8744 | 0.6202 | 0.7407 | 0.9030 | 0.6751 | 0.8915 | 80 | 49 | 456 | 28 |
+| High-sensitivity constrained | 0.19 | 0.6020 | 0.2964 | 0.9167 | 0.5347 | 0.4480 | 0.8915 | 99 | 235 | 270 | 9 |
+
+Bootstrap 95% confidence intervals were computed with 2,000 test-set resamples. For ResNet50 at the validation-selected max-F1 threshold:
+
+| Metric | Estimate [95% CI] |
+|---|---:|
+| Accuracy | 0.8777 [0.8499, 0.9038] |
+| Precision | 0.6320 [0.5431, 0.7180] |
+| Recall / Sensitivity | 0.7315 [0.6422, 0.8144] |
+| Specificity | 0.9089 [0.8823, 0.9346] |
+| F1-score | 0.6781 [0.6041, 0.7458] |
+| ROC-AUC | 0.8915 [0.8496, 0.9264] |
+
+Full tables are saved in:
+
+```text
+experiments/journal_strengthening/tables/threshold_tuning_table.tex
+experiments/journal_strengthening/tables/bootstrap_ci_table.tex
+```
 
 ## Result Interpretation
 
@@ -559,7 +677,9 @@ This is important because false negatives are especially concerning in fracture 
 
 The pretrained transfer learning models performed better than the custom CNN baseline. This makes sense because the dataset is relatively small compared with large-scale natural image datasets, and pretrained CNN backbones already contain useful visual features such as edges, textures, and shapes.
 
-The VLM pilot baseline showed that a general-purpose zero-shot VLM can produce structured fracture / no-fracture predictions, but it did not outperform the task-specific CNN models on fracture recall. In the available-image pilot subset, all three prompt variants detected only 2 out of 4 fracture-positive examples. The sensitive prompt increased false positives without improving recall, suggesting that prompt wording alone did not solve the missed-fracture problem in this small zero-shot setting.
+The VLM baseline showed that a general-purpose zero-shot VLM can produce structured fracture / no-fracture predictions, but it did not outperform the task-specific CNN models on fracture recall. In the full-test clean evaluation, the sensitive prompt improved recall relative to simple and conservative prompts, but it remained below the CNN models and increased false positives.
+
+The journal-strengthening analysis shows that ResNet50 performance depends on the selected operating threshold. Reporting both the fixed `0.50` threshold and validation-selected thresholds gives a clearer view of the trade-off between missed fractures and false alarms.
 
 ## Why Recall Matters
 
@@ -581,6 +701,8 @@ False negatives in the current CNN experiments:
 | DenseNet121 | 39 |
 
 ResNet50 had the lowest number of false negatives among the current CNN models.
+
+At the ResNet50 validation-selected max-F1 threshold (`0.57`), the model reduced false positives from 61 to 46, while false negatives increased from 26 to 29. A high-sensitivity threshold (`0.19`) reduced false negatives to 9, but at the cost of 235 false positives. These trade-offs should be discussed as operating-point choices rather than as separate trained models.
 
 ## Grad-CAM Explainability
 
@@ -632,17 +754,17 @@ This project has several important limitations:
 
    The model may learn patterns specific to the FracAtlas dataset and may not generalize to other hospitals, imaging devices, or patient populations.
 
-5. **Threshold not optimized**
+5. **Threshold tuning is validation-based, not clinical calibration**
 
-   The current prediction threshold is `0.5`. In a medical screening setting, threshold tuning may be needed to reduce false negatives.
+   The journal-strengthening package tunes thresholds on the validation set, but this is not the same as clinical calibration. A real deployment would require prospective validation and clinically chosen operating points.
 
 6. **False negatives still exist**
 
    Even the best current model still misses some fracture cases.
 
-7. **VLM pilot subset is small**
+7. **VLM stability remains limited**
 
-   The VLM baseline currently uses a small available-image subset in the repository environment. Its results should be treated as a pilot comparison, not a full-scale benchmark.
+   Full-test VLM baseline outputs are included, but repeated paid API trials are guarded and have not been run unless `RUN_VLM=1` is explicitly set.
 
 8. **VLMs are not medical diagnostic systems**
 
@@ -653,15 +775,16 @@ This project has several important limitations:
 Possible improvements include:
 
 - Train all CNN models for more epochs under the same experimental setup
+- Run the guarded multi-seed ResNet50 stability experiment
 - Tune learning rate, batch size, optimizer, and weight decay
-- Optimize the classification threshold to reduce false negatives
+- Calibrate probabilities and choose operating thresholds with clinical input
 - Add more model architectures such as EfficientNet or ConvNeXt
 - Use ensemble models
 - Add external validation using another X-ray dataset
 - Use bounding box or segmentation annotations for localization-aware evaluation
 - Compare Grad-CAM heatmaps with ground-truth fracture annotations
-- Expand the VLM baseline to the full held-out test set when all image files are available
-- Compare multiple VLM providers and prompt strategies under the same subset
+- Run repeated VLM trials across prompt modes to quantify API-output stability
+- Compare multiple VLM providers and prompt strategies under the same test split
 - Add a simple web demo for uploading an X-ray and viewing predictions
 - Add automated experiment tracking with TensorBoard or Weights & Biases
 
