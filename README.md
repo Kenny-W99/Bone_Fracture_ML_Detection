@@ -36,6 +36,14 @@ RUN_VLM=1 VLM_MODEL=gpt-4o-mini bash experiments/journal_strengthening/run_all_s
 
 No API keys, private `.env` files, raw image folders, or newly generated model checkpoints are committed.
 
+## Paper and Reproducibility
+
+- The final compiled manuscript PDF is stored in `paper/final_manuscript.pdf`.
+- The expected manuscript source path is `paper/final_manuscript.tex`. If the full exported LaTeX source is available separately, replace the placeholder file before journal submission.
+- Journal-strengthening results, scripts, tables, and figures are stored in `experiments/journal_strengthening/`.
+- The full raw FracAtlas image dataset and model checkpoints are not fully committed because of repository size limits.
+- Users can reproduce the reported experiments by downloading FracAtlas, placing the images under `data/FracAtlas/images/`, and running the provided training, evaluation, and journal-strengthening scripts.
+
 ## Project Overview
 
 This project builds a complete machine learning pipeline for bone fracture classification from musculoskeletal X-ray images. The main goal is to study how well task-specific CNN models can detect fractures, and how their performance compares with a small pilot baseline using a general-purpose multimodal LLM / VLM.
@@ -214,6 +222,11 @@ Bone_Fracture_ML_Detection/
 │   ├── results_summary_with_vlm.csv
 │   └── other training / evaluation outputs
 │
+├── paper/
+│   ├── final_manuscript.pdf
+│   ├── final_manuscript.tex
+│   └── old_versions/
+│
 ├── experiments/
 │   └── journal_strengthening/
 │       ├── README.md
@@ -327,6 +340,8 @@ set +a
 ```
 
 The `.env` file is ignored by Git and should never be committed.
+
+The repository includes a safe `.env.example` with empty placeholders only.
 
 ## How to Run
 
@@ -616,7 +631,7 @@ The following table summarizes the CNN results on the held-out test set.
 
 ### VLM Pilot Baseline Results
 
-The original VLM pilot used the available-image subset in the GitHub repository environment. A later full-test clean VLM pass is also included under `outputs/vlm/` for the 613-image held-out FracAtlas test split.
+The original VLM pilot used the available-image subset in the GitHub repository environment. Raw VLM API output CSVs are not committed because `outputs/vlm/` is ignored. A non-sensitive full-test summary CSV is committed under `experiments/journal_strengthening/results/` for the 613-image held-out FracAtlas test split.
 
 | Model | Prompt | n | Accuracy | Precision | Recall | Specificity | F1-score | ROC-AUC | TP | FP | TN | FN |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -624,7 +639,7 @@ The original VLM pilot used the available-image subset in the GitHub repository 
 | GPT-4o-mini | conservative | 24 | 0.8750 | 0.6667 | 0.5000 | 0.9500 | 0.5714 | 0.7250 | 2 | 1 | 19 | 2 |
 | GPT-4o-mini | sensitive | 24 | 0.6667 | 0.2500 | 0.5000 | 0.7000 | 0.3333 | 0.6000 | 2 | 6 | 14 | 2 |
 
-Full-test clean VLM results from `outputs/vlm/vlm_fulltest613_clean_summary.csv`:
+Full-test clean VLM summary from `experiments/journal_strengthening/results/vlm_fulltest613_clean_summary.csv`:
 
 | Model | Prompt | n | Accuracy | Precision | Recall | Specificity | F1-score | ROC-AUC | TP | FP | TN | FN |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -764,7 +779,7 @@ This project has several important limitations:
 
 7. **VLM stability remains limited**
 
-   Full-test VLM baseline outputs are included, but repeated paid API trials are guarded and have not been run unless `RUN_VLM=1` is explicitly set.
+   Full-test VLM summary metrics are included, but raw VLM API outputs are not committed. Repeated paid API trials are guarded and have not been run unless `RUN_VLM=1` is explicitly set.
 
 8. **VLMs are not medical diagnostic systems**
 
