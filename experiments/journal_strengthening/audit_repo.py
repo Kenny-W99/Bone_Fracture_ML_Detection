@@ -26,7 +26,7 @@ def main() -> None:
     result_patterns = [
         "outputs/results_summary.csv",
         "outputs/final_figures/results_summary.csv",
-        "outputs/vlm/vlm_fulltest613_clean_summary.csv",
+        "experiments/journal_strengthening/results/vlm_fulltest613_clean_summary.csv",
     ]
     lines = [
         "# Repository Audit",

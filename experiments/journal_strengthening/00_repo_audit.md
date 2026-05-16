@@ -20,7 +20,7 @@ The repository contains a PyTorch CNN pipeline under `src/`, FracAtlas data and 
 
 - `outputs/results_summary.csv`: present
 - `outputs/final_figures/results_summary.csv`: present
-- `outputs/vlm/vlm_fulltest613_clean_summary.csv`: present
+- `experiments/journal_strengthening/results/vlm_fulltest613_clean_summary.csv`: present
 - `outputs/resnet50_5ep/evaluation/predictions.csv`: present
 - `outputs/mobilenet_v2_5ep/evaluation/predictions.csv`: present
 - `outputs/densenet121_5ep/evaluation/predictions.csv`: present
